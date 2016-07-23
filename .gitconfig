@@ -1,0 +1,39 @@
+[user]
+	name = Ryp
+	email = ryp.sqrt@gmail.com
+[credential]
+	helper = cache
+[push]
+	defaults = simple
+	default = simple
+[core]
+	autocrlf = input
+	editor = kate
+[url "ssh://git@github.com/"]
+	pushInsteadOf = https://github.com/
+[url "git://github.com/"]
+    insteadOf = https://github.com/
+[color]
+	ui = auto
+[alias]
+    f = fetch -p
+    ec = config --global -e
+    cfd = clean -fd
+    d = diff
+    dc = diff --cached
+    dd = diff --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
+    ddc = diff --cached --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
+    s = status
+    sb = status -sb
+    ap = add -p
+    ad = add
+    l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    pat = format-patch --stdout HEAD~1 > diff.patch
+    co = checkout
+    pnr = pull --no-rebase
+    rc = rebase --continue
+    ra = rebase --abort
+    ri = rebase -i
+    ria = rebase -i --autosquash
+    fix = commit --fixup
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
