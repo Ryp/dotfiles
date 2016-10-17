@@ -1,9 +1,11 @@
 set nocompatible               " be iMproved
 set encoding=utf-8             " Unicode support
-set laststatus=2
+set laststatus=2               " Permanent status bar
+set t_Co=256                   " Colors
 filetype off                   " required!
 
 inoremap jk <ESC>
+nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,6 +17,8 @@ Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'Lokaltog/vim-powerline'
 Plugin 'rip-rip/clang_complete'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
@@ -23,4 +27,6 @@ syntax enable
 
 set background=dark
 colorscheme solarized
+
+let g:airline_powerline_fonts = 1
 
