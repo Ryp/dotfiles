@@ -44,10 +44,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline-fonts'
-Plugin 'rip-rip/clang_complete'
+" Plugin 'rip-rip/clang_complete'
+Plugin 'justmao945/vim-clang'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -65,3 +67,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme="base16"
+
+" For vim-clang
+let g:clang_compilation_database = './build'
+
