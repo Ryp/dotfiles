@@ -1,7 +1,3 @@
-export EDITOR="kate"
-
-#Dev
-alias ne='emacs -nw'
 alias -g ...=../..
 alias fucking='sudo'
 alias ls='ls --color'
@@ -15,9 +11,8 @@ alias reload='source ~/.zshrc'
 alias edit_rc='$EDITOR ~/.zshrc'
 alias edit_alias='$EDITOR ~/.aliases'
 alias maj='yaourt -Syua'
-#alias clean='find . -name "*.bak" -exec rm {} \;'
 
-alias deez_nuts='whiptail --msgbox "HAA!! GOT EEEE!!!" 8 25'
+#alias deez_nuts='whiptail --msgbox "HAA!! GOT EEEE!!!" 8 25'
 alias hd='hexdump -C'
 
 alias gdb='gdb -q'
@@ -26,9 +21,10 @@ alias vg='valgrind'
 alias vgf='valgrind --leak-check=full'
 alias vgfv='valgrind --leak-check=full -v'
 
+alias make='make --no-print-directory'
 alias fmake='make -j16'
 
-alias minecraft='optirun -b primus java -jar /home/ryp/Linux/Jeux/Minecraft.jar'
+#alias minecraft='optirun -b primus java -jar /home/ryp/Linux/Jeux/Minecraft.jar'
 
 function_exists() {
     declare -f -F $1 > /dev/null
@@ -38,3 +34,6 @@ function_exists() {
 for al in `git config --get-regexp 'alias.*' | colrm 1 6 | cut -d " " -f1`; do
     alias g$al="git $al"
 done
+
+[ -f ~/.aliases.local ] && source ~/.aliases.local
+

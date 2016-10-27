@@ -25,6 +25,8 @@
     ddc = diff --cached --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
     s = status
     sb = status -sb
+    st = stash
+    stp = stash pop
     ad = add
     ap = add -p
     lgm = log master..
@@ -39,3 +41,5 @@
     ria = rebase -i --autosquash
     fix = commit --fixup
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+[include]
+    path = ~/.gitconfig.local

@@ -1,10 +1,8 @@
-export EDITOR=nano
+export EDITOR="kate"
 export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 
 source $HOME/.profile
 source $HOME/.aliases
-# source /etc/profile.d/emscripten.sh
-# source /etc/profile.d/devkitarm.sh
 
 autoload -U colors && colors
 autoload -Uz promptinit && promptinit
@@ -25,5 +23,5 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
 bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 
-# added by travis gem
-[ -f /home/ryp/.travis/travis.sh ] && source /home/ryp/.travis/travis.sh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
