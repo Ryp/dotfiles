@@ -1,6 +1,3 @@
-[user]
-    name = Ryp
-    email = ryp.sqrt@gmail.com
 [credential]
     helper = cache
 [push]
