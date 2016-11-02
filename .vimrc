@@ -10,6 +10,7 @@ set relativenumber                    " Show relative line numbers
 set list lcs=tab:▸\ ,trail:·,nbsp:_   " Show invisible characters
 set noerrorbells                      " Disable the bell
 set scrolloff=4                       " Start scrolling n lines before the horizontal window border
+set nowrap                            " Do not wrap long lines
 
 set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
@@ -86,4 +87,5 @@ let g:airline_theme="base16"
 
 " For vim-clang
 let g:clang_compilation_database = './build'
+let g:clang_cpp_options = '-std=c++14'
 
