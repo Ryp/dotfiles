@@ -8,6 +8,7 @@ set number                            " Enable line numbers
 set cursorline                        " Highlight current line
 set relativenumber                    " Show relative line numbers
 set list lcs=tab:▸\ ,trail:·,nbsp:_   " Show invisible characters
+set showcmd                           " Show current command
 set noerrorbells                      " Disable the bell
 set scrolloff=4                       " Start scrolling n lines before the horizontal window border
 set nowrap                            " Do not wrap long lines
@@ -50,6 +51,30 @@ let mapleader = "\<Space>"
 inoremap jk <ESC>
 nnoremap <SPACE> <Nop>
 
+" Nazi mode (maybe check out VIM Hard Mode)
+" Level 1: do not allow arrow keys
+inoremap  <Up>     <Nop>
+inoremap  <Down>   <Nop>
+inoremap  <Left>   <Nop>
+inoremap  <Right>  <Nop>
+
+vnoremap  <Up>     <Nop>
+vnoremap  <Down>   <Nop>
+vnoremap  <Left>   <Nop>
+vnoremap  <Right>  <Nop>
+
+" Level 2: even in insert mode
+noremap   <Up>     <Nop>
+noremap   <Down>   <Nop>
+noremap   <Left>   <Nop>
+noremap   <Right>  <Nop>
+
+" Level 3: do not allow hjkl to move around in normal mode
+" noremap h <Nop>
+" noremap j <Nop>
+" noremap k <Nop>
+" noremap l <Nop>
+
 noremap <leader>W :w !sudo tee % > /dev/null<CR>    " Save file as root
 
 filetype off                          " required for vundle
@@ -65,6 +90,7 @@ Plugin 'justmao945/vim-clang'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'zeux/qgrep'
@@ -84,6 +110,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme="base16"
+let g:airline#extensions#tabline#enabled = 1 " Show buffer bar
 
 " For vim-clang
 let g:clang_compilation_database = './build'
