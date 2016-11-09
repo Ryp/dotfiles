@@ -117,6 +117,19 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_theme="base16"
 let g:airline#extensions#tabline#enabled = 1 " Show buffer bar
 let g:airline#extensions#tabline#fnamemod = ':t' " Only show filename
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ }
 
 " For vim-clang
 let g:clang_compilation_database = './build'
@@ -129,7 +142,7 @@ nmap <leader>p :CtrlP<cr>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn))$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
+  \ }
 
 " Show hidden files by default
 let g:ctrlp_show_hidden = 1
