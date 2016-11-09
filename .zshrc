@@ -1,10 +1,12 @@
-source ~/.zshrc_grml
-
-# export EDITOR="kate"
-# export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+source $HOME/.zshrc_grml
 
 source $HOME/.profile
 source $HOME/.aliases
+
+# Global aliases
+alias -g ...=../..
+alias -g ....=../../..
+alias -g .....=../../../..
 
 alias edit_rc='$EDITOR ~/.zshrc'
 alias reload='source ~/.zshrc'
@@ -16,7 +18,7 @@ zstyle ':prompt:grml:*:items:host' pre  "%{$fg_bold[yellow]%}"
 zstyle ':prompt:grml:*:items:host' post "%{$reset_color%}"
 
 zsh_stats () {
-	fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n20
+    fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n20
 }
 
 autoload -U up-line-or-beginning-search

@@ -1,4 +1,4 @@
-alias -g ...=../..
+### Misc aliases
 alias fucking='sudo'
 alias ls='ls --color'
 alias ll='ls -l'
@@ -6,11 +6,12 @@ alias lla='ls -la'
 alias la='ls -a'
 alias l='ls -laF --color'
 
-alias katesu='kdesu kate'
 alias edit_alias='$EDITOR ~/.aliases'
+
+### Distro-specific
 alias maj='yaourt -Syua'
 
-#alias deez_nuts='whiptail --msgbox "HAA!! GOT EEEE!!!" 8 25'
+### Dev
 alias hd='hexdump -C'
 
 alias gdb='gdb -q'
@@ -21,8 +22,6 @@ alias vgfv='valgrind --leak-check=full -v'
 
 alias make='make --no-print-directory'
 alias fmake='make -j16'
-
-#alias minecraft='optirun -b primus java -jar /home/ryp/Linux/Jeux/Minecraft.jar'
 
 function_exists() {
     declare -f -F $1 > /dev/null

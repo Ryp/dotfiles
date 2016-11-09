@@ -12,7 +12,7 @@ ln -s {$REPO,~/}.profile
 
 ln -s {$REPO,~/}.vimrc
 ln -s {$REPO,~/}.vim
-mkdir -p ~/.vim/{backups,swaps,undo}
+mkdir -p ~/.vim/{backup,swap,undo}
 
 ln -s {$REPO,~/}.gitconfig
 ln -s {$REPO,~/}.gdbinit
