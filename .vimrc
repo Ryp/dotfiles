@@ -111,8 +111,24 @@ endif
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme="base16"
 let g:airline#extensions#tabline#enabled = 1 " Show buffer bar
+let g:airline#extensions#tabline#fnamemod = ':t' " Only show filename
 
 " For vim-clang
 let g:clang_compilation_database = './build'
 let g:clang_cpp_options = '-std=c++14'
+
+" Make CtrlP more accessible
+nmap <leader>p :CtrlP<cr>
+
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn))$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
+" Show hidden files by default
+let g:ctrlp_show_hidden = 1
+
+" Use the nearest .git directory as the cwd
+let g:ctrlp_working_path_mode = 'r'
 
