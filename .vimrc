@@ -12,16 +12,18 @@ set showcmd                           " Show current command
 set noerrorbells                      " Disable the bell
 set scrolloff=4                       " Start scrolling n lines before the horizontal window border
 set nowrap                            " Do not wrap long lines
+set modelines=0                       " Disable modelines (i don't use them and they are not secure)
 
 set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
 set smarttab                          " Auto align on the next indent when using tab
 set expandtab                         " Insert spaces when pressing tab
 
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
 if exists("&undodir")
-    set undodir=~/.vim/undo
+    set undofile                      " Enable persistent undo history
+    set undodir=~/.vim/undo           " Specify undo history folder
 endif
 
 " ConEmu
@@ -47,9 +49,12 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 
+" Use the space key as leader
 let mapleader = "\<Space>"
-inoremap jk <ESC>
 nnoremap <SPACE> <Nop>
+
+" Go from insert to normal mode with jk instead of ESC
+inoremap jk <ESC>
 
 " Nazi mode (maybe check out VIM Hard Mode)
 " Level 1: do not allow arrow keys
