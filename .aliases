@@ -7,8 +7,6 @@ alias la='ls -a'
 alias l='ls -laF --color'
 
 alias katesu='kdesu kate'
-alias reload='source ~/.zshrc'
-alias edit_rc='$EDITOR ~/.zshrc'
 alias edit_alias='$EDITOR ~/.aliases'
 alias maj='yaourt -Syua'
 
