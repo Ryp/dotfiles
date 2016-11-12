@@ -87,19 +87,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Lokaltog/powerline-fonts'
-" Plugin 'rip-rip/clang_complete'
-Plugin 'justmao945/vim-clang'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'rip-rip/clang_complete'
+Plugin 'justmao945/vim-clang'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'zeux/qgrep'
 Plugin 'mileszs/ack.vim'
+" Plugin 'vhdirk/vim-cmake' " CMake integration
+" Plugin 'zeux/qgrep'
+" Plugin 'jalcine/cmake.vim' " CMake integration
+" Plugin 'garbas/vim-snipmate' " Snippets
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Lokaltog/powerline-fonts'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
