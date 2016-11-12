@@ -1,18 +1,21 @@
-### Misc aliases
-alias fucking='sudo'
+# NOTE: This file should be sourced from .zshrc
+
+#### Misc aliases
 alias ls='ls --color'
 alias ll='ls -l'
-alias lla='ls -la'
-alias la='ls -a'
+alias la='ls -la'
 alias l='ls -laF --color'
 
 alias edit_alias='$EDITOR ~/.aliases'
+
+alias fucking='sudo'
 
 ### Distro-specific
 alias maj='yaourt -Syua'
 
 ### Dev
-alias hd='hexdump -C'
+alias make='make --no-print-directory'
+alias fmake='make -j16'
 
 alias gdb='gdb -q'
 
@@ -20,17 +23,13 @@ alias vg='valgrind'
 alias vgf='valgrind --leak-check=full'
 alias vgfv='valgrind --leak-check=full -v'
 
-alias make='make --no-print-directory'
-alias fmake='make -j16'
+alias hd='hexdump -C'
 
-function_exists() {
-    declare -f -F $1 > /dev/null
-    return $?
-}
-
+# Takes any git alias in gitconfig and shortens it even more
 for al in `git config --get-regexp 'alias.*' | colrm 1 6 | cut -d " " -f1`; do
     alias g$al="git $al"
 done
 
+# Source local aliases if any
 [ -f ~/.aliases.local ] && source ~/.aliases.local
 
