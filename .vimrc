@@ -99,7 +99,7 @@ Plugin 'mileszs/ack.vim'
 " Plugin 'vhdirk/vim-cmake' " CMake integration
 " Plugin 'zeux/qgrep'
 " Plugin 'jalcine/cmake.vim' " CMake integration
-" Plugin 'garbas/vim-snipmate' " Snippets
+Plugin 'SirVer/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline-fonts'
@@ -152,4 +152,9 @@ let g:ctrlp_show_hidden = 1
 
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
+
+" Configure UltiSnips
+" let g:UltiSnipsExpandTrigger="<c-s>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
