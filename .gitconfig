@@ -4,7 +4,6 @@
     default = simple
 [core]
     autocrlf = input
-    editor = kate
 [url "ssh://git@github.com/"]
     pushInsteadOf = https://github.com/
 [url "git://github.com/"]
