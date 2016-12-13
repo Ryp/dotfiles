@@ -18,6 +18,7 @@ set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
 set smarttab                          " Auto align on the next indent when using tab
 set expandtab                         " Insert spaces when pressing tab
+set backspace=2                       " Relaxed rules for backspace in insert mode
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
