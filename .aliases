@@ -10,9 +10,6 @@ alias edit_alias='$EDITOR ~/.aliases'
 
 alias fucking='sudo'
 
-### Distro-specific
-alias maj='yaourt -Syua'
-
 ### Dev
 alias make='make --no-print-directory'
 alias fmake='make -j16'
@@ -30,6 +27,8 @@ for al in `git config --get-regexp 'alias.*' | colrm 1 6 | cut -d " " -f1`; do
     alias g$al="git $al"
 done
 
+### Distro-specific
+alias maj='yaourt -Syua'
+
 # Source local aliases if any
 [ -f ~/.aliases.local ] && source ~/.aliases.local
-
