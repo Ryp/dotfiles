@@ -4,6 +4,8 @@
     default = simple
 [core]
     autocrlf = input
+    preloadindex = true
+    fscache = true
 [url "ssh://git@github.com/"]
     pushInsteadOf = https://github.com/
 [url "git://github.com/"]
@@ -11,6 +13,8 @@
 [color]
     ui = auto
 [alias]
+    rl = "!rm .git/index.lock"
+    cmb = "!git branch --merged | egrep -v \"(^\\*|master)\" | xargs -rt git branch -d #"
     f = fetch -p
     ec = config --global -e
     cfd = clean -fd
@@ -27,8 +31,9 @@
     ap = add -p
     lgm = log master..
     l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    pat = format-patch --stdout HEAD~1 > diff.patch
+    pat = format-patch --stdout HEAD~1
     co = checkout
+    nb = checkout -b
     pnr = pull --no-rebase
     pff = pull --ff
     rc = rebase --continue
