@@ -57,6 +57,19 @@ nnoremap <SPACE> <Nop>
 " Go from insert to normal mode with jk instead of ESC
 inoremap jk <ESC>
 
+" Buffer management
+set hidden                            " Allow switching buffers without writing to the current one
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
 " Nazi mode (maybe check out VIM Hard Mode)
 " Level 1: do not allow arrow keys
 inoremap  <Up>     <Nop>
