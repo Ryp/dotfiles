@@ -12,6 +12,10 @@
     insteadOf = https://github.com/
 [color]
     ui = auto
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
 [alias]
     rl = "!rm .git/index.lock"
     cmb = "!git branch --merged | egrep -v \"(^\\*|master)\" | xargs -rt git branch -d #"
