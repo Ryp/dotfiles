@@ -27,6 +27,9 @@ if exists("&undodir")
     set undodir=~/.vim/undo           " Specify undo history folder
 endif
 
+set exrc                              " Allow vim to source project-specific vimrc's
+set secure                            " Do not allow unsafe commands when sourcing these
+
 " ConEmu
 if !empty($CONEMUBUILD)
     echom "Running in conemu"
