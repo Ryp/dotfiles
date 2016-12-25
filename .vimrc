@@ -20,6 +20,8 @@ set smarttab                          " Auto align on the next indent when using
 set expandtab                         " Insert spaces when pressing tab
 set backspace=2                       " Relaxed rules for backspace in insert mode
 
+set hidden                            " Allow switching buffers without writing to the current one
+
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 if exists("&undodir")
@@ -53,6 +55,10 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 
+" Key remapping stuff
+" In case of conflict, remember this old trick to reveal ambiguous keystrokes:
+" :verbose noremap [key_sequence]
+
 " Use the space key as leader
 let mapleader = "\<Space>"
 nnoremap <SPACE> <Nop>
@@ -60,11 +66,13 @@ nnoremap <SPACE> <Nop>
 " Go from insert to normal mode with jk instead of ESC
 inoremap jk <ESC>
 
+" Remap command key
+nnoremap ; :
+
 " Buffer management
-set hidden                            " Allow switching buffers without writing to the current one
-nmap <leader>T :enew<cr>
+nmap <leader>T :enew<CR>
+nmap <leader>k :bprevious<CR>
 nmap <leader>l :bnext<CR>
-nmap <leader>h :bprevious<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
@@ -72,6 +80,14 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
+
+" Build shortcut
+" map <F5> :make<CR><C-w><Up>
+map <F5> :make<CR>
+
+" Manage edits to this file
+nnoremap <silent> <leader>ve :e $MYVIMRC<CR>
+nnoremap <silent> <leader>vr :so $MYVIMRC<CR>
 
 " Nazi mode (maybe check out VIM Hard Mode)
 " Level 1: do not allow arrow keys
