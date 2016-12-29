@@ -186,6 +186,12 @@ let g:ctrlp_show_hidden = 1
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
 
+" Unset max file limit
+let g:ctrlp_max_files = 0
+
+" Enable permanent cache
+let g:ctrlp_clear_cache_on_exit = 0
+
 " Configure UltiSnips
 " let g:UltiSnipsExpandTrigger="<c-s>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
