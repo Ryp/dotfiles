@@ -32,21 +32,6 @@ endif
 set exrc                              " Allow vim to source project-specific vimrc's
 set secure                            " Do not allow unsafe commands when sourcing these
 
-" ConEmu
-if !empty($CONEMUBUILD)
-    echom "Running in conemu"
-    set termencoding=utf8
-    set term=xterm
-    set t_Co=256
-    let &t_AB="\e[48;5;%dm"
-    let &t_AF="\e[38;5;%dm"
-    " termcap codes for cursor shape changes on entry and exit to/from insert mode doesn't work
-    "let &t_ti="\e[1 q"
-    "let &t_SI="\e[5 q"
-    "let &t_EI="\e[1 q"
-    "let &t_te="\e[0 q"
-endif
-
 function! StripWhitespace()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
@@ -71,8 +56,8 @@ nnoremap ; :
 
 " Buffer management
 nmap <leader>T :enew<CR>
-nmap <leader>k :bprevious<CR>
-nmap <leader>l :bnext<CR>
+nmap <leader>j :bprevious<CR>
+nmap <leader>k :bnext<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
