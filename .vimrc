@@ -162,20 +162,21 @@ nmap <leader>p :CtrlP<cr>
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn))$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \ 'file': '\v\.(exe|so|dll|pdb|obj|png)$',
   \ }
 
-" Show hidden files by default
-let g:ctrlp_show_hidden = 1
+let g:ctrlp_show_hidden = 1                             " Show hidden files by default
+let g:ctrlp_working_path_mode = 'r'                     " Use the nearest .git directory as the cwd
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'         " Set cache folder
+let g:ctrlp_max_files = 0                               " Unset max file limit
+let g:ctrlp_clear_cache_on_exit = 0                     " Enable permanent cache
 
-" Use the nearest .git directory as the cwd
-let g:ctrlp_working_path_mode = 'r'
-
-" Unset max file limit
-let g:ctrlp_max_files = 0
-
-" Enable permanent cache
-let g:ctrlp_clear_cache_on_exit = 0
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor                " Use ag over grep
+    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"    let g:ackprg = 'ag --nogroup --nocolor --column'
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 " Configure UltiSnips
 " let g:UltiSnipsExpandTrigger="<c-s>"
