@@ -122,6 +122,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline-fonts'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'beyondmarc/hlsl.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -174,12 +175,17 @@ let g:ctrlp_clear_cache_on_exit = 0                     " Enable permanent cache
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor                " Use ag over grep
     " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-"    let g:ackprg = 'ag --nogroup --nocolor --column'
+    " let g:ackprg = 'ag --nogroup --nocolor --column'
     let g:ackprg = 'ag --vimgrep'
 endif
+
+nmap <leader>sw :Ack -w <cword><CR>
 
 " Configure UltiSnips
 " let g:UltiSnipsExpandTrigger="<c-s>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Reuse hlsl highlighting for cg files
+autocmd BufNewFile,BufRead *.cg set ft=hlsl
 
