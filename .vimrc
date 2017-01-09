@@ -115,6 +115,7 @@ Plugin 'justmao945/vim-clang'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vhdirk/vim-cmake' " CMake integration
+Plugin 'pboettch/vim-cmake-syntax'
 " Plugin 'zeux/qgrep'
 " Plugin 'jalcine/cmake.vim' " CMake integration
 Plugin 'SirVer/ultisnips'
