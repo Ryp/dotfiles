@@ -13,6 +13,7 @@ set noerrorbells                      " Disable the bell
 set scrolloff=4                       " Start scrolling n lines before the horizontal window border
 set nowrap                            " Do not wrap long lines
 set modelines=0                       " Disable modelines (i don't use them and they are not secure)
+set incsearch                         " Start searching while typing string
 
 set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
@@ -179,6 +180,8 @@ if executable('ag')
     " let g:ackprg = 'ag --nogroup --nocolor --column'
     let g:ackprg = 'ag --vimgrep'
 endif
+
+let g:ackhighlight = 1
 
 nmap <leader>sw :Ack -w <cword><CR>
 

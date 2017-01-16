@@ -38,6 +38,7 @@
     pat = format-patch --stdout HEAD~1
     co = checkout
     nb = checkout -b
+    cp = checkout -p
     pnr = pull --no-rebase
     pff = pull --ff
     rc = rebase --continue
