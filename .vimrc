@@ -112,7 +112,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 " Plugin 'rip-rip/clang_complete'
-Plugin 'justmao945/vim-clang'
+" Plugin 'justmao945/vim-clang'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vhdirk/vim-cmake' " CMake integration
@@ -156,8 +157,8 @@ let g:airline_mode_map = {
   \ }
 
 " For vim-clang
-let g:clang_compilation_database = './build'
-let g:clang_cpp_options = '-std=c++14'
+" let g:clang_compilation_database = './build'
+" let g:clang_cpp_options = '-std=c++14'
 
 " Make CtrlP more accessible
 nmap <leader>p :CtrlP<cr>
