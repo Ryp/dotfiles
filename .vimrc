@@ -52,8 +52,11 @@ nnoremap <SPACE> <Nop>
 " Go from insert to normal mode with jk instead of ESC
 inoremap jk <ESC>
 
-" Remap command key
+" Remap command key (easier to reach)
 nnoremap ; :
+
+" Fallback for ; that we just remapped
+nnoremap <Bslash> ;
 
 " Buffer management
 nmap <leader>T :enew<CR>
@@ -74,6 +77,9 @@ map <F5> :make<CR>
 " Manage edits to this file
 nnoremap <silent> <leader>ve :e $MYVIMRC<CR>
 nnoremap <silent> <leader>vr :so $MYVIMRC<CR>
+
+" My todo/done list
+nnoremap <silent> <leader>vt :e $HOME/.mylog<CR>
 
 " Nazi mode (maybe check out VIM Hard Mode)
 " Level 1: do not allow arrow keys
