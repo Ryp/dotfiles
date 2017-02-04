@@ -35,6 +35,12 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
 bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 
+# Set LS_COLORS
+[[ -f ~/.dircolors ]] && eval $(dircolors -b ~/.dircolors)
+
+# colored completion - use my LS_COLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
 # Vi mode (oh boy)
 # bindkey -v
 #

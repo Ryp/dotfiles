@@ -1,0 +1,4 @@
+URxvt.font: xft:Source Code Pro for Powerline:size=11:style=Medium
+URxvt.scrollBar: false
+URxvt.letterSpace: -1
+
