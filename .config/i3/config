@@ -49,34 +49,22 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -fn  "-*-profont-*-*-*-*-11-*-*-*-*-*-*-*" -nb "#161616" -nf "#909737" -sb "#909737" -sf "#161616"
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+m focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+m move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+m move right
 
 # split in horizontal orientation
 bindsym $mod+v split h
 
 # split in vertical orientation
-bindsym $mod+h split v
+bindsym $mod+t split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -212,8 +200,8 @@ bar {
 
 # Lock and power management stuff
 # Locker is starting i3lock and forces dpms off to turn off the screen immediately
-set $Locker i3lock -c ff8b94 -i ~/.i3/Pictures/lock.png && xset dpms force off
-bindsym $mod+Shift+l exec $Locker
+#set $Locker i3lock -c ff8b94 -i ~/.i3/Pictures/lock.png && xset dpms force off
+#bindsym $mod+Shift+l exec $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
