@@ -56,7 +56,7 @@ inoremap jk <ESC>
 nnoremap ; :
 
 " Fallback for ; that we just remapped
-nnoremap <Bslash> ;
+nnoremap <Bslash> @:
 
 " Buffer management
 nmap <leader>T :enew<CR>
@@ -168,6 +168,7 @@ let g:airline_mode_map = {
 
 " Make CtrlP more accessible
 nmap <leader>p :CtrlP<cr>
+nmap <leader>m :CtrlPMRUFiles<cr>
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
