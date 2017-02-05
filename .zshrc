@@ -18,8 +18,26 @@ alias reload='source ~/.zshrc'
 autoload -U colors && colors
 autoload -Uz promptinit && promptinit
 prompt grml
-zstyle ':prompt:grml:*:items:host' pre  "%{$fg_bold[yellow]%}"
-zstyle ':prompt:grml:*:items:host' post "%{$reset_color%}"
+
+# Default items
+# zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs percent
+# zstyle ':prompt:grml:right:setup' items sad-smiley
+
+zstyle ':prompt:grml:left:setup' items rc change-root path vcs percent
+zstyle ':prompt:grml:right:setup' items
+
+zstyle ':prompt:grml:left:items:path' pre '%F{blue}'
+
+#zstyle ':prompt:grml:*:items:host' pre  "%{$fg_bold[yellow]%}"
+#zstyle ':prompt:grml:*:items:host' post "%{$reset_color%}"
+
+# Set LS_COLORS
+if [ -f ~/.dircolors ]; then
+    eval $(dircolors -b ~/.dircolors)
+fi
+
+# colored completion - use my LS_COLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Find out what commands you use the most
 zsh_stats () {
@@ -34,12 +52,6 @@ zle -N down-line-or-beginning-search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
 bindkey "$terminfo[kcud1]" down-line-or-beginning-search
-
-# Set LS_COLORS
-[[ -f ~/.dircolors ]] && eval $(dircolors -b ~/.dircolors)
-
-# colored completion - use my LS_COLORS
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Vi mode (oh boy)
 # bindkey -v
@@ -71,5 +83,7 @@ bindkey "^X^E" edit-command-line
 unsetopt prompt_cr
 
 # Source local zshrc if any
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
 
