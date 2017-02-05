@@ -32,3 +32,7 @@ ln -s {$REPO,~/}.config/i3/config
 ln -s {$REPO,~/}.Xresources.d
 ln -s {$REPO,~/}.Xresources
 
+# htop Setup
+mkdir -p ~/.config/htop
+ln -s {$REPO,~/}.config/htop/htoprc
+
