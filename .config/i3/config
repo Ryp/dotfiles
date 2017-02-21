@@ -10,7 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Remove title bar
-new_window pixel 0
+new_window pixel 1
+hide_edge_borders both
 
 # No mouse auto focus
 focus_follows_mouse no
@@ -223,6 +224,7 @@ bindsym $mod+p mode "$mode_system"
 bindsym $mod+m exec pavucontrol
 
 # Start some tools
+exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper.png
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id xss-lock $Locker
 
