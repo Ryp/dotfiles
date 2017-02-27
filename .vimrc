@@ -191,7 +191,8 @@ endif
 
 let g:ackhighlight = 1
 
-nmap <leader>sw :Ack -w <cword><CR>
+nmap <leader>sw :Ack <cword><CR>                        " Search word
+nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
 
 " Configure UltiSnips
 " let g:UltiSnipsExpandTrigger="<c-s>"
