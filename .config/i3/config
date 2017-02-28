@@ -173,11 +173,17 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    mode hide
+    tray_output primary
+    position top
+    font xft:Source Code Pro for Powerline 10
+    status_command i3status #-c ~/.i3/i3status.conf
+
     colors {
 # Whole color settings
         background #3c3b37
-            statusline #989898
-            separator  #989898
+        statusline #989898
+        separator  #989898
 
 # Type             border  background font
 #focused_workspace  #008fff #007fff #ffffff
@@ -185,18 +191,12 @@ bar {
 #inactive_workspace #333333 #222222 #888888
 #urgent_workspace   #d98f93 #990000 #ffffff
 
-            focused_workspace #fdf6e3 #007fff #fdf6e3
+        focused_workspace #fdf6e3 #007fff #fdf6e3
 #active_workspace #fdf6e3 #6c71c4 #fdf6e3
 #inactive_workspace #002b36 #586e75 #002b36
 #urgent_workspace #d33682 #d33682 #fdf6e3
     }
 
-    mode dock
-        tray_output primary
-        position top
-        font xft:Source Code Pro for Powerline 10
-#font pango:DejaVu Sans Mono 12
-        status_command i3status #-c ~/.i3/i3status.conf
 }
 
 # Lock and power management stuff

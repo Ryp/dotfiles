@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
-# The script assumes this path
-REPO=~/dotfiles
+# call with a prompt string or use a default
+confirm() {
+    read -r -p "${1:-Are you sure?} [y/N] " response
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+REPO=${1:~/dotfiles}
 
 echo 'Installing from' $REPO
 ln -s {$REPO,$HOME}/.aliases
@@ -31,9 +43,8 @@ ln -s {$REPO,$HOME}/.vimrc
 mkdir -p $HOME/.vim/{backup,swap,undo}
 vim +PluginInstall +qall
 
-if whiptail --yesno "Vim plugins post-install?" 8 30
+if confirm "Vim plugins post-install?"
 then
-    echo 'Post-install...'
     # Install powerline patched fonts
     $HOME/.vim/bundle/powerline-fonts/install.sh
     # Setup YCM
@@ -41,13 +52,14 @@ then
     $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
 fi
 
-# i3 Setup
-if whiptail --yesno "Install i3?" 8 24
+if confirm "Install i3?"
 then
-    echo 'i3 setup...'
     mkdir -p $HOME/.config/i3
+    mkdir -p $HOME/.config/i3status
     ln -s {$REPO,$HOME}/.config/i3/config
+    ln -s {$REPO,$HOME}/.config/i3status/config
     ln -s $REPO/.Xresources.d $HOME
     ln -s {$REPO,$HOME}/.Xresources
 fi
+
 echo 'done'
