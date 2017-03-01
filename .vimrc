@@ -140,6 +140,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+nmap <silent> <leader>r :!ranger<CR>      " Open file browser
 nmap <leader>gm :!man <cword><CR>         " Search man for current word
 
 let g:airline_powerline_fonts = 1
