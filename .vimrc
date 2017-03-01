@@ -140,6 +140,8 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+nmap <leader>gm :!man <cword><CR>         " Search man for current word
+
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
