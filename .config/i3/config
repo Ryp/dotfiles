@@ -203,5 +203,5 @@ bindsym $mod+p mode "$mode_system"
 bindsym $mod+m exec pavucontrol
 
 # Start some tools
-exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper.png
+exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper
 
