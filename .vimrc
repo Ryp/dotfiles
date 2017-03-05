@@ -132,6 +132,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline-fonts'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'beyondmarc/hlsl.vim'
+Plugin 'vim-scripts/supp.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -204,4 +205,5 @@ nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
+autocmd BufNewFile,BufRead *.supp set ft=supp
 
