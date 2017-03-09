@@ -133,6 +133,7 @@ Plugin 'Lokaltog/powerline-fonts'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'beyondmarc/hlsl.vim'
 Plugin 'vim-scripts/supp.vim'
+Plugin 'dummyunit/vim-fastbuild'
 call vundle#end()
 
 filetype plugin indent on
