@@ -141,5 +141,12 @@ then
     link_file {$REPO,$HOME}/.Xresources
 fi
 
+if confirm "Install irssi cfg?"
+then
+    mkdir -p $HOME/.irssi
+    link_file {$REPO,$HOME}/.irssi/config
+    link_file {$REPO,$HOME}/.irssi/default.theme
+fi
+
 echo 'done'
 
