@@ -1,4 +1,39 @@
 set nocompatible                      " be iMproved
+filetype off                          " required for vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+" Plugin 'rip-rip/clang_complete'
+" Plugin 'justmao945/vim-clang'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'vhdirk/vim-cmake' " CMake integration
+Plugin 'SirVer/ultisnips'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Lokaltog/powerline-fonts'
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'beyondmarc/hlsl.vim'
+Plugin 'vim-scripts/supp.vim'
+Plugin 'dummyunit/vim-fastbuild'
+call vundle#end()
+filetype plugin indent on
+
+syntax enable
+
+set background=dark
+colorscheme solarized
+
 set encoding=utf-8 nobomb             " Unicode support
 set laststatus=2                      " Permanent status bar
 set t_Co=256                          " Colors
@@ -106,41 +141,6 @@ noremap   <Right>  <Nop>
 " noremap l <Nop>
 
 noremap <leader>W :w !sudo tee % > /dev/null<CR>    " Save file as root
-
-filetype off                          " required for vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-" Plugin 'rip-rip/clang_complete'
-" Plugin 'justmao945/vim-clang'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'vhdirk/vim-cmake' " CMake integration
-Plugin 'pboettch/vim-cmake-syntax'
-" Plugin 'zeux/qgrep'
-" Plugin 'jalcine/cmake.vim' " CMake integration
-Plugin 'SirVer/ultisnips'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Lokaltog/powerline-fonts'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'beyondmarc/hlsl.vim'
-Plugin 'vim-scripts/supp.vim'
-Plugin 'dummyunit/vim-fastbuild'
-call vundle#end()
-
-filetype plugin indent on
-syntax enable
-
-set background=dark
-colorscheme solarized
 
 nmap <silent> <leader>r :!ranger<CR>      " Open file browser
 nmap <leader>gm :!man <cword><CR>         " Search man for current word
