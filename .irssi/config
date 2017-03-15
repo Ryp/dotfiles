@@ -14,13 +14,6 @@ servers = (
     tls_verify = "yes";
   },
   {
-    address = "chat.freenode.net";
-    chatnet = "Freenode";
-    port = "6697";
-    use_tls = "yes";
-    tls_verify = "yes";
-  },
-  {
     address = "irc.gamesurge.net";
     chatnet = "GameSurge";
     port = "6667";
@@ -64,11 +57,11 @@ servers = (
     port = "6667";
   },
   {
-    address = "freenode.net";
+    address = "chat.freenode.net";
     chatnet = "Freenode";
-    port = "6667";
-    use_tls = "no";
-    tls_verify = "no";
+    port = "6697";
+    use_tls = "yes";
+    tls_verify = "yes";
     autoconnect = "yes";
   }
 );
@@ -98,7 +91,7 @@ chatnets = {
     max_msgs = "4";
     max_whois = "1";
     sasl_mechanism = "PLAIN";
-    sasl_username = "ryp";
+    sasl_username = "Ryp";
     sasl_password = "PASSWORD";
   };
   GameSurge = {
@@ -148,8 +141,8 @@ chatnets = {
 };
 
 channels = (
-  { name = "#vulkan"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "##vulkan"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "Yes"; },
 );
 
 aliases = {
@@ -405,7 +398,6 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Kramer McBarett"; user_name = "ryp"; nick = "ryp"; };
+  core = { real_name = "Unknown"; user_name = "ryp"; nick = "ryp"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
-hilights = ( { text = "ryp"; nick = "yes"; word = "yes"; } );
