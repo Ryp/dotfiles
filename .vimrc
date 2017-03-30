@@ -68,21 +68,9 @@ endif
 set exrc                              " Allow vim to source project-specific vimrc's
 set secure                            " Do not allow unsafe commands when sourcing these
 
-function! StripWhitespace()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfunction
-
 " Key remapping stuff
 " In case of conflict, remember this old trick to reveal ambiguous keystrokes:
 " :verbose noremap [key_sequence]
-
-" Use the space key as leader
-let mapleader = "\<Space>"
-nnoremap <SPACE> <Nop>
 
 " Go from insert to normal mode with jk instead of ESC
 inoremap jk <ESC>
@@ -92,29 +80,6 @@ nnoremap ; :
 
 " Fallback for ; that we just remapped
 nnoremap <Bslash> @:
-
-" Buffer management
-nmap <leader>T :enew<CR>
-nmap <leader>j :bprevious<CR>
-nmap <leader>k :bnext<CR>
-
-" Close the current buffer and move to the previous one
-" This replicates the idea of closing a tab
-nmap <leader>bc :bp <BAR> bd #<CR>
-
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>
-
-" Build shortcut
-" map <F5> :make<CR><C-w><Up>
-map <F5> :make<CR>
-
-" Manage edits to this file
-nnoremap <silent> <leader>ve :e $MYVIMRC<CR>
-nnoremap <silent> <leader>vr :so $MYVIMRC<CR>
-
-" My todo/done list
-nnoremap <silent> <leader>vt :e $HOME/.mylog<CR>
 
 " Nazi mode (maybe check out VIM Hard Mode)
 " Level 1: do not allow arrow keys
@@ -140,11 +105,69 @@ noremap   <Right>  <Nop>
 " noremap k <Nop>
 " noremap l <Nop>
 
-noremap <leader>W :w !sudo tee % > /dev/null<CR>    " Save file as root
+" Build shortcut
+" map <F5> :make<CR><C-w><Up>
+map <F5> :make<CR>
 
-nmap <silent> <leader>r :!ranger<CR>      " Open file browser
-nmap <leader>gm :!man <cword><CR>         " Search man for current word
+let g:runprg ='./build/reaper && chromium profile.html'
 
+function! MakeRun()
+    silent make
+    execute '!' . g:runprg
+endfunction
+
+map <F6> :call MakeRun()<CR>
+
+" Simple function to strip trailing whitespaces
+function! StripWhitespace()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfunction
+
+" Same as StripWhitespace but does a retab too
+function! CleanFile()
+    retab
+    call StripWhitespace()
+endfunction
+
+" Use the space key as leader
+let mapleader = "\<Space>"
+nnoremap <SPACE> <Nop>
+
+nmap <leader>C :call CleanFile()<CR>
+
+" Buffer management
+nmap <leader>T :enew<CR>
+nmap <leader>j :bprevious<CR>
+nmap <leader>k :bnext<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bc :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
+" Manage edits to this file
+nnoremap <silent> <leader>ve :e $MYVIMRC<CR>
+nnoremap <silent> <leader>vr :so $MYVIMRC<CR>
+
+" My todo/done list
+nnoremap <silent> <leader>vt :e $HOME/.mylog<CR>
+
+" Save file as root
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+" Open file browser
+nmap <silent> <leader>r :!ranger<CR>
+
+" Search man for current word
+nmap <leader>gm :!man <cword><CR>
+
+" Misc plugin configuration
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -207,4 +230,3 @@ nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
 autocmd BufNewFile,BufRead *.supp set ft=supp
-
