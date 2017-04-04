@@ -222,10 +222,17 @@ let g:ackhighlight = 1
 nmap <leader>sw :Ack <cword><CR>                        " Search word
 nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
 
+" YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
+
 " Configure UltiSnips
-" let g:UltiSnipsExpandTrigger="<c-s>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
+let g:UltiSnipsSnippetsDir = $HOME . '/.vim/ultisnips'
+
+let g:UltiSnipsExpandTrigger = "<C-J>"
+let g:UltiSnipsJumpForwardTrigger = "<C-J>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-K>"
+
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
