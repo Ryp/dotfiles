@@ -11,11 +11,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 " Plugin 'rip-rip/clang_complete'
 " Plugin 'justmao945/vim-clang'
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vhdirk/vim-cmake' " CMake integration
-Plugin 'SirVer/ultisnips'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,6 +67,8 @@ endif
 
 set exrc                              " Allow vim to source project-specific vimrc's
 set secure                            " Do not allow unsafe commands when sourcing these
+
+set shortmess+=c                      " Hide default completion messages (interacts with Ycm)
 
 " Key remapping stuff
 " In case of conflict, remember this old trick to reveal ambiguous keystrokes:
@@ -222,17 +224,21 @@ let g:ackhighlight = 1
 nmap <leader>sw :Ack <cword><CR>                        " Search word
 nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
 
-" YouCompleteMe
-let g:ycm_confirm_extra_conf = 0
-
 " Configure UltiSnips
 " let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
 let g:UltiSnipsSnippetsDir = $HOME . '/.vim/ultisnips'
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-k>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-l>"
+let g:UltiSnipsListSnippets = "<c-y>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsUsePythonVersion = 2
 
-let g:UltiSnipsExpandTrigger = "<C-J>"
-let g:UltiSnipsJumpForwardTrigger = "<C-J>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-K>"
-
+" YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_server_log_level = 'debug'
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
