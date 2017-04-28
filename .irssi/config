@@ -142,7 +142,7 @@ chatnets = {
 
 channels = (
   { name = "##vulkan"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -400,4 +400,11 @@ statusbar = {
 settings = {
   core = { real_name = "Unknown"; user_name = "ryp"; nick = "ryp"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "solarized"; };
 };
+ignores = (
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "##vulkan", "#archlinux" );
+  }
+);

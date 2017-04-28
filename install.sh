@@ -143,9 +143,7 @@ fi
 
 if confirm "Install irssi cfg?"
 then
-    mkdir -p $HOME/.irssi
-    link_file {$REPO,$HOME}/.irssi/config
-    link_file {$REPO,$HOME}/.irssi/default.theme
+    link_folder $REPO/.irssi $HOME
 fi
 
 echo 'done'
