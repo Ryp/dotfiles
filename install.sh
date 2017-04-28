@@ -119,7 +119,7 @@ then
     link_folder $REPO/.vim $HOME
     link_file {$REPO,$HOME}/.vimrc
     mkdir -p $HOME/.vim/{backup,swap,undo}
-    vim +PluginInstall +qall
+    vim +PluginClean +PluginInstall +PluginUpdate +qall
 
     if confirm "Vim plugins post-install?"
     then
