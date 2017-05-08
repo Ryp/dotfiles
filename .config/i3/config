@@ -199,8 +199,8 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
-# Shortcut to show volume control settings window
-bindsym $mod+m exec pavucontrol
+# Chromium shortcut
+bindsym $mod+c exec chromium
 
 # Start some tools
 exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper
