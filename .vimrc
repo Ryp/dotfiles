@@ -44,7 +44,7 @@ set cursorline                        " Highlight current line
 set relativenumber                    " Show relative line numbers
 set list lcs=tab:▸\ ,trail:·,nbsp:_   " Show invisible characters
 set showcmd                           " Show current command
-set noerrorbells                      " Disable the bell
+set belloff=all                       " Disable the bell
 set scrolloff=4                       " Start scrolling n lines before the horizontal window border
 set nowrap                            " Do not wrap long lines
 set modelines=0                       " Disable modelines (i don't use them and they are not secure)
