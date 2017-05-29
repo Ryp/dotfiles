@@ -141,6 +141,11 @@ then
     link_file {$REPO,$HOME}/.Xresources
 fi
 
+if confirm "Install tmux cfg?"
+then
+    link_file {$REPO,$HOME}/.tmux.conf
+fi
+
 if confirm "Install irssi cfg?"
 then
     link_folder $REPO/.irssi $HOME
