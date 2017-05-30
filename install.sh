@@ -144,6 +144,7 @@ fi
 if confirm "Install tmux cfg?"
 then
     link_file {$REPO,$HOME}/.tmux.conf
+    link_folder $REPO/.tmux $HOME
 fi
 
 if confirm "Install irssi cfg?"

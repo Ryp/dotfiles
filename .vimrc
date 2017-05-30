@@ -21,6 +21,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline-fonts'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'edkolev/tmuxline.vim'
 
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'beyondmarc/hlsl.vim'
