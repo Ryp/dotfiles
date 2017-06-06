@@ -1,3 +1,5 @@
+[advice]
+    statusHints = false
 [credential]
     helper = cache
 [push]
