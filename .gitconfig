@@ -29,8 +29,7 @@
     dh = diff HEAD
     dd = diff --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
     ddc = diff --cached --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
-    s = status
-    ss = status -s
+    s = status -s
     sb = status -sb
     st = stash
     stp = stash pop
