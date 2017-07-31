@@ -152,6 +152,7 @@ then
     mkdir -p $HOME/.weechat
     link_file {$REPO,$HOME}/.weechat/irc.conf
     link_file {$REPO,$HOME}/.weechat/plugins.conf
+    link_file {$REPO,$HOME}/.weechat/script.conf
     link_file {$REPO,$HOME}/.weechat/weechat.conf
 fi
 
