@@ -147,6 +147,14 @@ then
     link_folder $REPO/.tmux $HOME
 fi
 
+if confirm "Install weechat cfg?"
+then
+    mkdir -p $HOME/.weechat
+    link_file {$REPO,$HOME}/.weechat/irc.conf
+    link_file {$REPO,$HOME}/.weechat/plugins.conf
+    link_file {$REPO,$HOME}/.weechat/weechat.conf
+fi
+
 if confirm "Install irssi cfg?"
 then
     link_folder $REPO/.irssi $HOME
