@@ -50,6 +50,7 @@ set scrolloff=4                       " Start scrolling n lines before the horiz
 set nowrap                            " Do not wrap long lines
 set modelines=0                       " Disable modelines (i don't use them and they are not secure)
 set incsearch                         " Start searching while typing string
+set hlsearch                          " Highlight current search
 
 set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
