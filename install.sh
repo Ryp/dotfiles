@@ -154,6 +154,18 @@ then
     link_file {$REPO,$HOME}/.weechat/plugins.conf
     link_file {$REPO,$HOME}/.weechat/script.conf
     link_file {$REPO,$HOME}/.weechat/weechat.conf
+
+    if confirm "Reset sec.conf?"
+    then
+        echo -n 'New passphrase:'
+        read -s WEECHAT_PASSPHRASE
+        echo
+        echo -n 'Freenode password:'
+        read -s FREENODE_PASSWORD
+        echo
+        weechat -r "/secure passphrase $WEECHAT_PASSPHRASE ; /secure set freenode_password $FREENODE_PASSWORD ; /quit"
+        cat $HOME/.weechat/sec.conf
+    fi
 fi
 
 echo 'done'
