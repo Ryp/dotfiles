@@ -156,10 +156,5 @@ then
     link_file {$REPO,$HOME}/.weechat/weechat.conf
 fi
 
-if confirm "Install irssi cfg?"
-then
-    link_folder $REPO/.irssi $HOME
-fi
-
 echo 'done'
 
