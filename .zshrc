@@ -16,6 +16,7 @@ alias reload='source ~/.zshrc'
 
 # Setup theme
 autoload -U colors && colors
+autoload -U bashcompinit && bashcompinit
 autoload -Uz promptinit && promptinit
 prompt grml
 
