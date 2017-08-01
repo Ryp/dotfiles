@@ -245,3 +245,6 @@ let g:ycm_server_log_level = 'debug'
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
 autocmd BufNewFile,BufRead *.supp set ft=supp
+
+" Set default makeprg for some filetypes
+autocmd FileType python set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %
