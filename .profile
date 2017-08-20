@@ -4,9 +4,11 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 # Source local profile if any
-if [ -f ~/.profile.local ]; then
-    source ~/.profile.local
+if [ -f $HOME/.profile.local ]; then
+    source $HOME/.profile.local
 fi
+
+export PATH="$HOME/.local/bin:$PATH"
 
 # [-]ixany  let any character restart output, not only start character
 # [-]ixoff  enable sending of start/stop characters

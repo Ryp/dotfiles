@@ -179,16 +179,14 @@ bar
 }
 
 # Lock and power management stuff
-# Locker is starting i3lock and forces dpms off to turn off the screen immediately
-#set $Locker i3lock -c ff8b94 -i ~/.i3/Pictures/lock.png && xset dpms force off
-#bindsym $mod+Shift+l exec $Locker
+#bindsym $mod+Shift+z exec lock
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym l exec --no-startup-id lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id lock && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id lock && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -205,3 +203,5 @@ bindsym $mod+c exec chromium
 # Start some tools
 exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper
 
+# Lock screen on startup
+exec --no-startup-id lock

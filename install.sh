@@ -92,6 +92,14 @@ link_folder()
 REPO=~/dotfiles
 
 echo 'Installing from' $REPO
+
+if confirm "Install custom scripts?"
+then
+    mkdir -p $HOME/.local/bin
+    link_file {$REPO,$HOME/.local}/bin/lock
+    link_file {$REPO,$HOME/.local}/bin/ipodsync
+fi
+
 link_file {$REPO,$HOME}/.aliases
 
 link_file {$REPO,$HOME}/.dircolors
