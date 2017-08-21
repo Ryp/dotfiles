@@ -4,3 +4,4 @@ test "$#" -eq 1 || exit 1
 test -f $1 || exit 2
 rm $HOME/.wallpaper
 ln -s $1 $HOME/.wallpaper
+feh --bg-scale $HOME/.wallpaper
