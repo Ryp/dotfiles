@@ -93,6 +93,9 @@ REPO=~/dotfiles
 
 echo 'Installing from' $REPO
 
+link_file {$REPO,$HOME}/.gitconfig
+link_file {$REPO,$HOME}/.gdbinit
+
 if confirm "Install custom scripts?"
 then
     mkdir -p $HOME/.local/bin
@@ -100,26 +103,25 @@ then
     link_file {$REPO,$HOME/.local}/bin/ipodsync
 fi
 
-link_file {$REPO,$HOME}/.aliases
-
-link_file {$REPO,$HOME}/.dircolors
-link_file {$REPO,$HOME}/.profile
-
-link_file {$REPO,$HOME}/.gitconfig
-link_file {$REPO,$HOME}/.gdbinit
-
 # htop Setup
 mkdir -p $HOME/.config/htop
 link_file {$REPO,$HOME}/.config/htop/htoprc
 
-mkdir -p $HOME/.config/ranger
-link_folder $REPO/.config/ranger/colorschemes $HOME/.config/ranger
-link_file {$REPO,$HOME}/.config/ranger/rc.conf
+link_file {$REPO,$HOME}/.profile
+link_file {$REPO,$HOME}/.aliases
+link_file {$REPO,$HOME}/.dircolors
+
+if confirm "Install bash cfg?"
+then
+    link_file {$REPO,$HOME}/.bashrc
+    link_file {$REPO,$HOME}/.bash_profile
+fi
 
 if confirm "Install zsh cfg?"
 then
     link_file {$REPO,$HOME}/.zshrc
     wget -O $HOME/.zshrc_grml http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+    link_file {$REPO,$HOME}/.zlogin
 fi
 
 if confirm "Install vim cfg?"
@@ -147,6 +149,13 @@ then
     link_file {$REPO,$HOME}/.config/i3status/config
     link_folder $REPO/.Xresources.d $HOME
     link_file {$REPO,$HOME}/.Xresources
+fi
+
+if confirm "Install ranger cfg?"
+then
+    mkdir -p $HOME/.config/ranger
+    link_folder $REPO/.config/ranger/colorschemes $HOME/.config/ranger
+    link_file {$REPO,$HOME}/.config/ranger/rc.conf
 fi
 
 if confirm "Install tmux cfg?"

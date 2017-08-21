@@ -6,10 +6,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -laF --color'
 
-# Color fuckup on WSL
-alias ranger='TERM=xterm-256color ranger'
-
-alias edit_alias='$EDITOR ~/.aliases'
+alias edit_aliases='$EDITOR ~/.aliases'
 
 alias fucking='sudo'
 
@@ -29,9 +26,6 @@ alias hd='hexdump -C'
 for al in `git config --get-regexp 'alias.*' | colrm 1 6 | cut -d " " -f1`; do
     alias g$al="git $al"
 done
-
-### Distro-specific
-alias maj='yaourt -Syua'
 
 # Source local aliases if any
 [ -f ~/.aliases.local ] && source ~/.aliases.local

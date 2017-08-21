@@ -1,3 +1,7 @@
+#
+# ~/.zshrc
+#
+
 # Source the main configuration for zsh
 source $HOME/.zshrc_grml
 
