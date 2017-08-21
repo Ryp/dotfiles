@@ -6,6 +6,9 @@ alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -laF --color'
 
+# Hack needed to get correct colors in ranger
+alias ranger='TERM=xterm-256color ranger'
+
 alias edit_aliases='$EDITOR ~/.aliases'
 
 alias fucking='sudo'

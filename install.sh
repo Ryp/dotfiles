@@ -101,6 +101,7 @@ then
     mkdir -p $HOME/.local/bin
     link_file {$REPO,$HOME/.local}/bin/lock
     link_file {$REPO,$HOME/.local}/bin/ipodsync
+    link_file {$REPO,$HOME/.local}/bin/set_wallpaper
 fi
 
 # htop Setup
