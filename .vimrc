@@ -171,6 +171,9 @@ nmap <silent> <leader>r :!ranger<CR>
 " Search man for current word
 nmap <leader>gm :!man <cword><CR>
 
+" Use clang-format on current source file
+nmap <leader>cf :!clang-format -style=file -i %<CR>
+
 " Misc plugin configuration
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
