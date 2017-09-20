@@ -35,7 +35,6 @@
     stp = stash pop
     ad = add
     ap = add --patch
-    apm = "!git add -p `git ls-files -m`"
     lgm = log master..
     l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     pat = format-patch --stdout HEAD~1
