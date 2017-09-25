@@ -159,6 +159,12 @@ then
     link_file {$REPO,$HOME}/.config/ranger/rc.conf
 fi
 
+if confirm "Install cmus cfg?"
+then
+    mkdir -p $HOME/.config/cmus
+    link_file {$REPO,$HOME}/.config/cmus/rc
+fi
+
 if confirm "Install tmux cfg?"
 then
     link_file {$REPO,$HOME}/.tmux.conf
