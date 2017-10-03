@@ -4,29 +4,32 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+" Main plugins
+Plugin 'scrooloose/nerdtree'                " Handy tree explorer
+Plugin 'tpope/vim-fugitive'                 " Git integration
+Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
+Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
+Plugin 'airblade/vim-gitgutter'             " Extra column for git +/- signs
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-" Plugin 'rip-rip/clang_complete'
-" Plugin 'justmao945/vim-clang'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'SirVer/ultisnips'                   " Snippet support (not working yet)
+Plugin 'Valloric/YouCompleteMe'             " Clang-based completion
+Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plugin 'mileszs/ack.vim'
-Plugin 'vhdirk/vim-cmake' " CMake integration
+Plugin 'vhdirk/vim-cmake'                   " CMake integration
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Lokaltog/powerline-fonts'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'edkolev/tmuxline.vim'
+" Cosmetic plugins
+Plugin 'altercation/vim-colors-solarized'   " Solarized colors
+Plugin 'vim-airline/vim-airline'            " Main theming plugin
+Plugin 'vim-airline/vim-airline-themes'     " Extra themes
+Plugin 'Lokaltog/powerline-fonts'           " Fancy fonts
+Plugin 'edkolev/tmuxline.vim'               " Apply VIM's theme to tmux
 
-Plugin 'pboettch/vim-cmake-syntax'
-Plugin 'beyondmarc/hlsl.vim'
-Plugin 'vim-scripts/supp.vim'
-Plugin 'dummyunit/vim-fastbuild'
+" Extra syntax support
+Plugin 'pboettch/vim-cmake-syntax'          " CMake
+Plugin 'beyondmarc/hlsl.vim'                " HLSL
+Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
+Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
 call vundle#end()
 filetype plugin indent on
 
@@ -174,7 +177,25 @@ nmap <leader>gm :!man <cword><CR>
 " Use clang-format on current source file
 nmap <leader>cf :!clang-format -style=file -i %<CR>
 
-" Misc plugin configuration
+" Plugin configuration
+
+" vim-fugitive
+" Open parent tree
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+" Do not open countless buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" GitHub support (vim-rhubarb)
+let g:github_enterprise_urls = []
+
+" GitLab support (fugitive-gitlab)
+let g:fugitive_gitlab_domains = []
+
+" Theme configuration
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -196,10 +217,6 @@ let g:airline_mode_map = {
   \ 'S'  : 'S',
   \ '' : 'S',
   \ }
-
-" For vim-clang
-" let g:clang_compilation_database = './build'
-" let g:clang_cpp_options = '-std=c++14'
 
 " Make CtrlP more accessible
 nmap <leader>p :CtrlP<cr>
