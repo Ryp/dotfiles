@@ -180,12 +180,6 @@ nmap <leader>cf :!clang-format -style=file -i %<CR>
 " Plugin configuration
 
 " vim-fugitive
-" Open parent tree
-autocmd User fugitive
-  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
-
 " Do not open countless buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
