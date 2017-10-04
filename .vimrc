@@ -6,6 +6,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Main plugins
 Plugin 'scrooloose/nerdtree'                " Handy tree explorer
+Plugin 'tpope/vim-unimpaired'               " Additionnal pair mappings
 Plugin 'tpope/vim-fugitive'                 " Git integration
 Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
 Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
@@ -54,6 +55,7 @@ set nowrap                            " Do not wrap long lines
 set modelines=0                       " Disable modelines (i don't use them and they are not secure)
 set incsearch                         " Start searching while typing string
 set hlsearch                          " Highlight current search
+set foldopen-=search                  " Do not expand folds when searching
 
 set tabstop=4                         " Set tab width
 set shiftwidth=4                      " Indent size
@@ -180,6 +182,25 @@ nmap <leader>cf :!clang-format -style=file -i %<CR>
 " Plugin configuration
 
 " vim-fugitive
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+
+nnoremap <leader>gp :Ggrep<Space>
+" nnoremap <leader>gm :Gmove<Space> (clash)
+" nnoremap <leader>gb :Git branch<Space> (clash)
+nnoremap <leader>go :Git checkout<Space>
+
+" nnoremap <leader>gps :Dispatch! git push<CR>
+" nnoremap <leader>gpl :Dispatch! git pull<CR>
+
 " Do not open countless buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
