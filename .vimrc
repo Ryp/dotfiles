@@ -258,8 +258,14 @@ endif
 
 let g:ackhighlight = 1
 
-nmap <leader>sw :Ack <cword><CR>                        " Search word
-nmap <leader>sew :Ack -w <cword><CR>                    " Search entire word
+" Search
+nmap <leader>a :Ack<space>
+
+" Search word
+nmap <leader>sw :Ack <cword><CR>
+
+" Search entire word
+nmap <leader>sew :Ack -w <cword><CR>
 
 " Configure UltiSnips
 " let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
