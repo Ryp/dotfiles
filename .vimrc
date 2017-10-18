@@ -18,6 +18,7 @@ Plugin 'Valloric/YouCompleteMe'             " Clang-based completion
 Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plugin 'mileszs/ack.vim'
 Plugin 'vhdirk/vim-cmake'                   " CMake integration
+Plugin 'vim-utils/vim-man'                  " Better manual integration
 
 " Cosmetic plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized colors
@@ -144,7 +145,7 @@ endfunction
 
 " Use the space key as leader
 let mapleader = "\<Space>"
-nnoremap <SPACE> <Nop>
+nnoremap <Space> <Nop>
 
 nmap <leader>C :call CleanFile()<CR>
 
@@ -172,9 +173,6 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Open file browser
 nmap <silent> <leader>r :!ranger<CR>
-
-" Search man for current word
-nmap <leader>gm :!man <cword><CR>
 
 " Use clang-format on current source file
 nmap <leader>cf :!clang-format -style=file -i %<CR>
@@ -259,13 +257,17 @@ endif
 let g:ackhighlight = 1
 
 " Search
-nmap <leader>a :Ack<space>
+nmap <leader>a :Ack<Space>
 
 " Search word
 nmap <leader>sw :Ack <cword><CR>
 
 " Search entire word
 nmap <leader>sew :Ack -w <cword><CR>
+
+" vim-man configuration
+" Open man (needs a bit of work)
+nmap <leader>gm :Vman<Space>
 
 " Configure UltiSnips
 " let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
