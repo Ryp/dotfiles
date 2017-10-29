@@ -266,7 +266,7 @@ nmap <leader>sw :Ack <cword><CR>
 nmap <leader>sew :Ack -w <cword><CR>
 
 " Open vertically split vim-man for word under cursor
-nmap <leader>gm yw :Vman <C-r>"<CR>
+map <leader>gm <Plug>(Vman)
 
 " Configure UltiSnips
 " let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
