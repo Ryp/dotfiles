@@ -182,6 +182,16 @@ bar
 # Lock and power management stuff
 #bindsym $mod+Shift+z exec lock
 
+set $mode_redshift Redshift (y) enable, (n) disable
+mode "$mode_redshift" {
+    bindsym y exec --no-startup-id redshift -l 48.8:23.5 -o, mode "default"
+    bindsym n exec --no-startup-id redshift -l 48.8:23.5 -ox, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+u mode "$mode_redshift"
+
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id lock, mode "default"
