@@ -32,6 +32,7 @@ Plugin 'pboettch/vim-cmake-syntax'          " CMake
 Plugin 'beyondmarc/hlsl.vim'                " HLSL
 Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
+Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
 call vundle#end()
 filetype plugin indent on
 
@@ -287,6 +288,9 @@ let g:ycm_server_log_level = 'debug'
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
 autocmd BufNewFile,BufRead *.supp set ft=supp
+
+" rTorrent syntax
+autocmd BufNewFile,BufRead *rtorrent.rc* set filetype=rtorrent
 
 " Set default makeprg for some filetypes
 autocmd FileType python set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %

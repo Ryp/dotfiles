@@ -192,5 +192,15 @@ then
     fi
 fi
 
+if confirm "Install rtorrent cfg?"
+then
+    # Config path
+    mkdir -p $HOME/.config/rtorrent
+    link_file {$REPO,$HOME}/.rtorrent.rc
+
+    # Local folders
+    mkdir -p $HOME/.local/share/rtorrent/{download,session,log}
+fi
+
 echo 'done'
 
