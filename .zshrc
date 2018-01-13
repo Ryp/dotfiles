@@ -2,6 +2,9 @@
 # ~/.zshrc
 #
 
+# Uncomment to profile zsh startup
+#zmodload zsh/zprof
+
 # Source the main configuration for zsh
 source $HOME/.zshrc_grml
 
@@ -95,3 +98,5 @@ if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
 
+# Uncomment to profile zsh startup
+#zprof
