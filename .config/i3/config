@@ -216,3 +216,7 @@ exec --no-startup-id feh --bg-scale /home/ryp/.wallpaper
 
 # Lock screen on startup
 exec --no-startup-id lock
+
+# Setup keyboard
+exec "setxkbmap -layout us,fr"
+exec "setxkbmap setxkbmap -option 'grp:alt_shift_toggle'"
