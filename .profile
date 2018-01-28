@@ -8,6 +8,13 @@ if [ -f $HOME/.profile.local ]; then
     source $HOME/.profile.local
 fi
 
+# Add ruby gems to the $PATH
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+    export GEM_HOME=$HOME/.gem
+fi
+
+# Add commonly used local bin folder
 export PATH="$HOME/.local/bin:$PATH"
 
 # [-]ixany  let any character restart output, not only start character
