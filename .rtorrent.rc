@@ -16,7 +16,7 @@ method.insert = cfg.logs,       private|const|string, (cat, (cfg.basedir), "log/
 method.insert = cfg.logfile,    private|const|string, (cat, (cfg.logs), "rtorrent-", (system.time), ".log")
 
 # Listening port for incoming peer traffic (fixed; you can also randomize it)
-network.port_range.set = 28113-28113
+network.port_range.set = 10101-10101
 network.port_random.set = no
 
 # Tracker-less torrent and UDP tracker support
