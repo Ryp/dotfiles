@@ -111,6 +111,7 @@ link_file {$REPO,$HOME}/.config/htop/htoprc
 link_file {$REPO,$HOME}/.profile
 link_file {$REPO,$HOME}/.aliases
 link_file {$REPO,$HOME}/.dircolors
+link_file {$REPO,$HOME}/.config/user-dirs.dirs
 
 if confirm "Install bash cfg?"
 then
