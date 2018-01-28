@@ -182,8 +182,8 @@ bar
 # Redshift
 set $mode_redshift Redshift (y) enable, (n) disable
 mode "$mode_redshift" {
-    bindsym y exec --no-startup-id redshift -l 48.8:23.5 -o, mode "default"
-    bindsym n exec --no-startup-id redshift -l 48.8:23.5 -ox, mode "default"
+    bindsym y exec --no-startup-id redshift -l 48.8:23.5 -O 2200 -o, mode "default"
+    bindsym n exec --no-startup-id redshift -ox, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
