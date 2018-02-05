@@ -98,5 +98,14 @@ if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
 
+function ranger-cd {
+    local tmpfile="$(mktemp)"
+    ranger --choosedir=$tmpfile $argv
+    local rangerpwd=`cat $tmpfile`
+    if [ "$PWD" != $rangerpwd ]; then
+        cd $rangerpwd
+    fi
+}
+
 # Uncomment to profile zsh startup
 #zprof
