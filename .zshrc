@@ -31,7 +31,7 @@ prompt grml
 # zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs percent
 # zstyle ':prompt:grml:right:setup' items sad-smiley
 
-zstyle ':prompt:grml:left:setup' items rc change-root path vcs percent
+zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs percent
 zstyle ':prompt:grml:right:setup' items
 
 zstyle ':prompt:grml:left:items:percent' token '$ '
