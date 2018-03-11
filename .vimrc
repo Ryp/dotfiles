@@ -30,6 +30,7 @@ Plugin 'edkolev/tmuxline.vim'               " Apply VIM's theme to tmux
 " Extra syntax support
 Plugin 'pboettch/vim-cmake-syntax'          " CMake
 Plugin 'beyondmarc/hlsl.vim'                " HLSL
+Plugin 'kbenzie/vim-spirv'                  " SPIR-V
 Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
 Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
