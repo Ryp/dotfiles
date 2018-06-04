@@ -32,6 +32,7 @@ Plugin 'pboettch/vim-cmake-syntax'          " CMake
 Plugin 'beyondmarc/hlsl.vim'                " HLSL
 Plugin 'tikhomirov/vim-glsl'                " GLSL
 Plugin 'kbenzie/vim-spirv'                  " SPIR-V
+Plugin 'ryp/vim-gcn-isa'                    " GCN ISA
 Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
 Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
