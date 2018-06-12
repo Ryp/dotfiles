@@ -7,18 +7,20 @@ Plugin 'VundleVim/Vundle.vim'
 " Main plugins
 Plugin 'scrooloose/nerdtree'                " Handy tree explorer
 Plugin 'tpope/vim-unimpaired'               " Additionnal pair mappings
-Plugin 'tpope/vim-fugitive'                 " Git integration
-Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
-Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
-Plugin 'airblade/vim-gitgutter'             " Extra column for git +/- signs
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'SirVer/ultisnips'                   " Snippet support (not working yet)
 Plugin 'Valloric/YouCompleteMe'             " Clang-based completion
 Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plugin 'mileszs/ack.vim'
-Plugin 'vhdirk/vim-cmake'                   " CMake integration
 Plugin 'vim-utils/vim-man'                  " Better manual integration
+Plugin 'vhdirk/vim-cmake'                   " CMake integration
+
+" VCS
+Plugin 'tpope/vim-fugitive'                 " Git integration
+Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
+Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
+Plugin 'airblade/vim-gitgutter'             " Extra column for git +/- signs
 
 " Cosmetic plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized colors
@@ -32,9 +34,10 @@ Plugin 'pboettch/vim-cmake-syntax'          " CMake
 Plugin 'beyondmarc/hlsl.vim'                " HLSL
 Plugin 'tikhomirov/vim-glsl'                " GLSL
 Plugin 'kbenzie/vim-spirv'                  " SPIR-V
-Plugin 'ryp/vim-gcn-isa'                    " GCN ISA
+Plugin 'Ryp/vim-gcn-isa'                    " GCN ISA
 Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
+Plugin 'PProvost/vim-ps1'                   " Powershell
 Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
 call vundle#end()
 filetype plugin indent on
