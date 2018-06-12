@@ -1,5 +1,12 @@
-# dotfiles
+# Dotfiles
 Just my dotfiles, duh
+
+# Install
+
+```sh
+$ git submodule update --init
+$ ./install.sh
+```
 
 ## NOTES:
 
