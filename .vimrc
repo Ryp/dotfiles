@@ -123,8 +123,12 @@ noremap   <Right>  <Nop>
 " noremap l <Nop>
 
 " Build shortcut
-" map <F5> :make<CR><C-w><Up>
-map <F5> :make<CR>
+" - Avoids 'press OK to continue' pause
+" - Jumps to first error
+map <F5> :silent make\|redraw!\|cc<CR>
+
+" Automatically open quickfix window after the make command
+" autocmd QuickFixCmdPost * :copen
 
 let g:runprg ='./build/reaper && chromium profile.html'
 
