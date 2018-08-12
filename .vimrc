@@ -127,8 +127,8 @@ noremap   <Right>  <Nop>
 " - Jumps to first error
 map <F5> :silent make\|redraw!\|cc<CR>
 
-" Automatically open quickfix window after the make command
-" autocmd QuickFixCmdPost * :copen
+" Automatically open quickfix window if errors are found
+autocmd QuickFixCmdPost * :cw
 
 let g:runprg ='./build/reaper && chromium profile.html'
 
