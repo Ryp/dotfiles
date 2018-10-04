@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive'                 " Git integration
 Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
 Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
 Plugin 'airblade/vim-gitgutter'             " Extra column for git +/- signs
+Plugin 'nfvs/vim-perforce'                  " Perforce integration
 
 " Cosmetic plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized colors
@@ -219,6 +220,9 @@ let g:github_enterprise_urls = []
 " GitLab support (fugitive-gitlab)
 let g:fugitive_gitlab_domains = []
 
+" Perforce
+let g:perforce_use_relative_paths = 1
+
 " Theme configuration
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -275,6 +279,9 @@ nmap <leader>sw :Ack <cword><CR>
 
 " Search entire word
 nmap <leader>sew :Ack -w <cword><CR>
+
+" Replace word
+nmap <leader>s ye:%s/<c-r>"/<c-r>"
 
 " Open vertically split vim-man for word under cursor
 map <leader>gm <Plug>(Vman)
