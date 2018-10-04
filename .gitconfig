@@ -8,10 +8,6 @@
     autocrlf = input
     preloadindex = true
     fscache = true
-[url "ssh://git@github.com/"]
-    pushInsteadOf = https://github.com/
-[url "git://github.com/"]
-    insteadOf = https://github.com/
 [color]
     ui = auto
 [color "status"]
@@ -31,6 +27,7 @@
     ddc = diff --cached --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
     s = status -s
     sb = status -sb
+    su = status -s -uno
     st = stash
     stp = stash pop
     ad = add

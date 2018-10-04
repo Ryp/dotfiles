@@ -29,7 +29,7 @@ alias vgfv='valgrind --leak-check=full -v'
 alias hd='hexdump -C'
 
 # Takes any git alias in gitconfig and shortens it even more
-for al in `git config --get-regexp 'alias.*' | colrm 1 6 | cut -d " " -f1`; do
+for al in `git config --get-regexp 'alias.*' | cut -c 7- | cut -d " " -f1`; do
     alias g$al="git $al"
 done
 
