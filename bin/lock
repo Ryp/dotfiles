@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# Requires i3lock-fancy and imagemagick
-
-i3lock-fancy -t "`whoami`@`hostname`"  -- import -silent -window root

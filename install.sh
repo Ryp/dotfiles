@@ -99,7 +99,6 @@ link_file {$REPO,$HOME}/.gdbinit
 if confirm "Install custom scripts?"
 then
     mkdir -p $HOME/.local/bin
-    link_file {$REPO,$HOME/.local}/bin/lock
     link_file {$REPO,$HOME/.local}/bin/ipodsync
     link_file {$REPO,$HOME/.local}/bin/set_wallpaper
 fi
@@ -143,12 +142,14 @@ then
     fi
 fi
 
-if confirm "Install i3 cfg?"
+if confirm "Install sway cfg?"
 then
-    mkdir -p $HOME/.config/i3
+    mkdir -p $HOME/.config/sway
+    link_file {$REPO,$HOME}/.config/sway/config
+
     mkdir -p $HOME/.config/i3status
-    link_file {$REPO,$HOME}/.config/i3/config
     link_file {$REPO,$HOME}/.config/i3status/config
+
     link_folder $REPO/.Xresources.d $HOME
     link_file {$REPO,$HOME}/.Xresources
 fi
