@@ -9,8 +9,7 @@ alias l='ls -laF --color'
 alias df='df --human-readable'
 alias du='du --human-readable'
 
-# Hack needed to get correct colors in ranger
-alias ranger='TERM=xterm-256color ranger'
+alias rr='ranger'
 
 alias edit_aliases='$EDITOR ~/.aliases'
 
