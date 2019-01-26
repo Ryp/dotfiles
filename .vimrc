@@ -31,6 +31,7 @@ Plugin 'Lokaltog/powerline-fonts'           " Fancy fonts
 Plugin 'edkolev/tmuxline.vim'               " Apply VIM's theme to tmux
 
 " Extra syntax support
+Plugin 'octol/vim-cpp-enhanced-highlight'   " C++
 Plugin 'pboettch/vim-cmake-syntax'          " CMake
 Plugin 'beyondmarc/hlsl.vim'                " HLSL
 Plugin 'tikhomirov/vim-glsl'                " GLSL
