@@ -15,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-utils/vim-man'                  " Better manual integration
 Plugin 'vhdirk/vim-cmake'                   " CMake integration
+Plugin 'rust-lang/rust.vim'                 " Rust integration
 
 " VCS
 Plugin 'tpope/vim-fugitive'                 " Git integration
@@ -41,6 +42,8 @@ Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
 Plugin 'PProvost/vim-ps1'                   " Powershell
 Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
+Plugin 'cespare/vim-toml'                   " TOML
+
 call vundle#end()
 filetype plugin indent on
 
