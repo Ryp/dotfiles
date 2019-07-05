@@ -305,6 +305,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_server_log_level = 'debug'
+let g:ycm_rust_src_path = $HOME . '/.vim/rustc-1.36.0/src'
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl

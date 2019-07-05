@@ -139,6 +139,11 @@ then
         # Setup YCM
         # requires some libs first, check the help (:h Ycm)
         $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --racer-completer
+
+        rust_source_archive="1.36.0.tar.gz"
+        rust_source_path="$HOME/.vim/"
+        wget -nc -P $rust_source_path "https://github.com/rust-lang/rust/archive/$rust_source_archive"
+        tar -zxvf "$rust_source_path/$rust_source_archive" -C $rust_source_path
     fi
 fi
 
