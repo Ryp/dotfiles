@@ -138,7 +138,7 @@ then
         $HOME/.vim/bundle/powerline-fonts/install.sh
         # Setup YCM
         # requires some libs first, check the help (:h Ycm)
-        $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
+        $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --racer-completer
     fi
 fi
 
