@@ -298,7 +298,7 @@ let g:UltiSnipsJumpForwardTrigger = "<c-k>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-l>"
 let g:UltiSnipsListSnippets = "<c-y>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsUsePythonVersion = 2
+" let g:UltiSnipsUsePythonVersion = 2
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
