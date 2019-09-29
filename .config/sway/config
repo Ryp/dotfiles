@@ -114,8 +114,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 # Sound control
 bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +10%"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -10%"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -5%"
 
 # Cmus controls
 bindsym XF86AudioPause exec --no-startup-id "cmus-remote --pause"
