@@ -311,6 +311,7 @@ nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
+autocmd BufNewFile,BufRead *.hlsli set ft=hlsl
 autocmd BufNewFile,BufRead *.supp set ft=supp
 
 " rTorrent syntax
