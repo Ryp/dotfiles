@@ -29,6 +29,7 @@
     sb = status -sb
     su = status -s -uno
     st = stash
+    stu = stash --include-untracked
     stp = stash pop
     ad = add
     ap = add --patch
