@@ -1,3 +1,6 @@
 bind -f common ^U win-page-up
 bind -f common ^D win-page-down
+
 colorscheme solarized-dark
+
+set lib_sort=albumartist album discnumber tracknumber title genre filename
