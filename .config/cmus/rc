@@ -3,4 +3,9 @@ bind -f common ^D win-page-down
 
 colorscheme solarized-dark
 
-set lib_sort=albumartist album discnumber tracknumber title genre filename
+# Setup sorted library view
+set format_playlist= %-21%l %3n. %t%= %g %{?y!=0?%4y?    } %d %{?X!=0?%3X?   } 
+set format_playlist_va= %-21%l %3n. %t (%a)%= %g %{?y!=0?%4y?    } %d %{?X!=0?%3X?   } 
+set lib_sort=album discnumber tracknumber title genre filename
+
+fset ost=genre="Soundtrack"
