@@ -89,7 +89,7 @@ link_folder()
     fi
 }
 
-REPO=~/dotfiles
+REPO=$(dirname $(readlink -f "$0"))
 
 echo 'Installing from' $REPO
 
