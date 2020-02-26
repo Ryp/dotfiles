@@ -319,3 +319,6 @@ autocmd BufNewFile,BufRead *rtorrent.rc* set filetype=rtorrent
 
 " Set default makeprg for some filetypes
 autocmd FileType python set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %
+
+" Add error format for the glslang shader compiler
+let &errorformat = "ERROR\:\ %f\\:%l\\:%m," . &errorformat
