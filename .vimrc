@@ -291,8 +291,7 @@ nmap <leader>s ye:%s/<c-r>"/<c-r>"
 map <leader>gm <Plug>(Vman)
 
 " Configure UltiSnips
-" let g:UltiSnipsSnippetDirectories = $HOME . '/.vim/ultisnips'
-let g:UltiSnipsSnippetsDir = $HOME . '/.vim/ultisnips'
+let g:UltiSnipsSnippetDirectories = [ "ultisnips" ]
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-k>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-l>"

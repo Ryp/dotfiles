@@ -1,27 +1,10 @@
-# TODO invoke date for the current year
-snippet reaper_header "Reaper license header"
+snippet reaper_license "Reaper license header"
 ////////////////////////////////////////////////////////////////////////////////
 /// Reaper
 ///
-/// Copyright (c) 2015-2017 Thibault Schueller
+/// Copyright (c) 2015-`date +%Y` Thibault Schueller
 /// This file is distributed under the MIT License
 ////////////////////////////////////////////////////////////////////////////////
 
 ${0}
-endsnippet
-
-snippet reaper_once "Reaper header guard"
-#ifdef ${1:REAPER_`!p
-if not snip.c:
-    import random, string
-    name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
-    rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
-    snip.rv = ('%s_%s' % (name,rand)).upper()
-else:
-    snip.rv = snip.c`_INCLUDED}
-#define $1
-
-${0}
-
-#endif // $1
 endsnippet
