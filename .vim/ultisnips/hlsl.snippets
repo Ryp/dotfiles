@@ -1,0 +1,17 @@
+snippet for
+for (uint i = 0; i < $1; i++)
+{
+	$0
+}
+endsnippet
+
+snippet cs_main "Compute Shader"
+[numthreads(${1:8}, ${2:8}, ${3:1})]
+void main(uint3 gtid : SV_GroupThreadID,
+          uint3 gid  : SV_GroupID,
+          uint3 dtid : SV_DispatchThreadID,
+          uint  gi   : SV_GroupIndex)
+{
+	$0
+}
+endsnippet
