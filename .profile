@@ -3,6 +3,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
+# Limit make verbosity
+export GNUMAKEFLAGS=--no-print-directory
+
 # Source local profile if any
 if [ -f $HOME/.profile.local ]; then
     source $HOME/.profile.local
