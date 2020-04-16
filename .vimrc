@@ -321,3 +321,7 @@ autocmd FileType python set makeprg=pylint\ --reports=n\ --msg-template=\"{path}
 
 " Add error format for the glslang shader compiler
 let &errorformat = "ERROR\:\ %f\\:%l\\:%m," . &errorformat
+
+" Some other compiler
+let &errorformat = "%f(%l\\,%c)\ \:\ warning\ %t%n\:\ %m," . &errorformat
+let &errorformat = "%f(%l\\,%c)\ \:\ error\ %t%n\:\ %m," . &errorformat
