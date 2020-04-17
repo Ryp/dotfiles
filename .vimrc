@@ -38,7 +38,7 @@ Plugin 'beyondmarc/hlsl.vim'                " HLSL
 Plugin 'tikhomirov/vim-glsl'                " GLSL
 Plugin 'kbenzie/vim-spirv'                  " SPIR-V
 Plugin 'Ryp/vim-gcn-isa'                    " GCN ISA
-Plugin 'vim-scripts/supp.vim'               " Valgrind suppression files
+Plugin 'Ryp/supp.vim'                       " Valgrind suppression files
 Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
 Plugin 'PProvost/vim-ps1'                   " Powershell
 Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
@@ -311,7 +311,6 @@ nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
 autocmd BufNewFile,BufRead *.hlsli set ft=hlsl
-autocmd BufNewFile,BufRead *.supp set ft=supp
 
 " rTorrent syntax
 autocmd BufNewFile,BufRead *rtorrent.rc* set filetype=rtorrent
