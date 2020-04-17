@@ -9,8 +9,8 @@ Plugin 'scrooloose/nerdtree'                " Handy tree explorer
 Plugin 'tpope/vim-unimpaired'               " Additionnal pair mappings
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'SirVer/ultisnips'                   " Snippet support (not working yet)
 Plugin 'Valloric/YouCompleteMe'             " Completion support
+Plugin 'SirVer/ultisnips'                   " Snippet support
 Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-utils/vim-man'                  " Better manual integration
