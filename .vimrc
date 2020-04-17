@@ -135,7 +135,7 @@ map <F5> :silent make\|redraw!\|cc<CR>
 " Automatically open quickfix window if errors are found
 autocmd QuickFixCmdPost * :cw
 
-let g:runprg ='./build/reaper && chromium profile.html'
+let g:runprg ='gdb -ex=r --args ./build/reaper && chromium profile.html'
 
 function! MakeRun()
     silent make
