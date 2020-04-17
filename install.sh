@@ -129,7 +129,7 @@ if confirm "Install vim cfg?"
 then
     link_folder $REPO/.vim $HOME
     link_file {$REPO,$HOME}/.vimrc
-    mkdir -p $HOME/.vim/{backup,swap,undo}
+    mkdir -p $HOME/.vim/{backup,swap,undo,cache}
     vim +PluginClean +PluginInstall +PluginUpdate +qall
 
     if confirm "Vim plugins post-install?"
@@ -141,7 +141,7 @@ then
         $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --racer-completer
 
         rust_source_archive="1.36.0.tar.gz"
-        rust_source_path="$HOME/.vim/"
+        rust_source_path="$HOME/.vim/cache"
         wget -nc -P $rust_source_path "https://github.com/rust-lang/rust/archive/$rust_source_archive"
         tar -zxvf "$rust_source_path/$rust_source_archive" -C $rust_source_path
     fi
