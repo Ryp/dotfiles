@@ -209,5 +209,11 @@ then
     mkdir -p $HOME/.local/share/rtorrent/{download,session,log}
 fi
 
+if confirm "Install alacritty cfg?"
+then
+    # Config path
+    link_file {$REPO,$HOME}/.alacritty.yml
+fi
+
 echo 'done'
 
