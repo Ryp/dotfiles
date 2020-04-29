@@ -19,7 +19,7 @@ font pango:Source Code Pro for Powerline 10
 set $menu dmenu_path | dmenu | xargs swaymsg exec
 
 # terminal
-set $term urxvt
+set $term alacritty
 
 # lock
 set $lock swaylock -c 000000
