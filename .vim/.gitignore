@@ -1,4 +1,6 @@
 !.gitignore
+autoload/plug.vim
+plugged
 backup
 swap
 undo

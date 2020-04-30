@@ -129,8 +129,10 @@ if confirm "Install vim cfg?"
 then
     link_folder $REPO/.vim $HOME
     link_file {$REPO,$HOME}/.vimrc
-    mkdir -p $HOME/.vim/{backup,swap,undo,cache}
-    vim +PluginClean +PluginInstall +PluginUpdate +qall
+    mkdir -p $HOME/.vim/{backup,swap,undo,cache,autoload}
+    cp $REPO/{external/vim-plug/plug.vim,.vim/autoload}
+
+    vim +PlugInstall +qall
 
     if confirm "Vim plugins post-install?"
     then

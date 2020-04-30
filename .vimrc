@@ -1,53 +1,46 @@
-set nocompatible                      " be iMproved
-filetype off                          " required for vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " Main plugins
-Plugin 'scrooloose/nerdtree'                " Handy tree explorer
-Plugin 'tpope/vim-unimpaired'               " Additionnal pair mappings
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'Valloric/YouCompleteMe'             " Completion support
-Plugin 'SirVer/ultisnips'                   " Snippet support
-Plugin 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
-Plugin 'mileszs/ack.vim'
-Plugin 'vim-utils/vim-man'                  " Better manual integration
-Plugin 'vhdirk/vim-cmake'                   " CMake integration
-Plugin 'rust-lang/rust.vim'                 " Rust integration
+Plug 'scrooloose/nerdtree'              " Handy tree explorer
+Plug 'tpope/vim-unimpaired'             " Additionnal pair mappings
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'Valloric/YouCompleteMe'           " Completion support
+Plug 'SirVer/ultisnips'                 " Snippet support
+Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
+Plug 'mileszs/ack.vim'
+Plug 'vim-utils/vim-man'                " Better manual integration
+Plug 'vhdirk/vim-cmake'                 " CMake integration
+Plug 'rust-lang/rust.vim'               " Rust integration
 
 " VCS
-Plugin 'tpope/vim-fugitive'                 " Git integration
-Plugin 'tpope/vim-rhubarb'                  " + support for GitHub
-Plugin 'shumphrey/fugitive-gitlab.vim'      " + support for GitLab
-Plugin 'airblade/vim-gitgutter'             " Extra column for git +/- signs
-Plugin 'nfvs/vim-perforce'                  " Perforce integration
+Plug 'tpope/vim-fugitive'               " Git integration
+Plug 'tpope/vim-rhubarb'                " + support for GitHub
+Plug 'shumphrey/fugitive-gitlab.vim'    " + support for GitLab
+Plug 'airblade/vim-gitgutter'           " Extra column for git +/- signs
+Plug 'nfvs/vim-perforce'                " Perforce integration
 
 " Cosmetic plugins
-Plugin 'altercation/vim-colors-solarized'   " Solarized colors
-Plugin 'vim-airline/vim-airline'            " Main theming plugin
-Plugin 'vim-airline/vim-airline-themes'     " Extra themes
-Plugin 'Lokaltog/powerline-fonts'           " Fancy fonts
-Plugin 'edkolev/tmuxline.vim'               " Apply VIM's theme to tmux
+Plug 'altercation/vim-colors-solarized' " Solarized colors
+Plug 'vim-airline/vim-airline'          " Main theming plugin
+Plug 'vim-airline/vim-airline-themes'   " Extra themes
+Plug 'Lokaltog/powerline-fonts'         " Fancy fonts
+Plug 'edkolev/tmuxline.vim'             " Apply VIM's theme to tmux
 
 " Extra syntax support
-Plugin 'octol/vim-cpp-enhanced-highlight'   " C++
-Plugin 'pboettch/vim-cmake-syntax'          " CMake
-Plugin 'beyondmarc/hlsl.vim'                " HLSL
-Plugin 'tikhomirov/vim-glsl'                " GLSL
-Plugin 'kbenzie/vim-spirv'                  " SPIR-V
-Plugin 'Ryp/vim-gcn-isa'                    " GCN ISA
-Plugin 'Ryp/supp.vim'                       " Valgrind suppression files
-Plugin 'dummyunit/vim-fastbuild'            " FASTBuild
-Plugin 'PProvost/vim-ps1'                   " Powershell
-Plugin 'vim-scripts/rtorrent-syntax-file'   " rTorrent
-Plugin 'cespare/vim-toml'                   " TOML
+Plug 'octol/vim-cpp-enhanced-highlight' " C++
+Plug 'pboettch/vim-cmake-syntax'        " CMake
+Plug 'beyondmarc/hlsl.vim'              " HLSL
+Plug 'tikhomirov/vim-glsl'              " GLSL
+Plug 'kbenzie/vim-spirv'                " SPIR-V
+Plug 'Ryp/vim-gcn-isa'                  " GCN ISA
+Plug 'Ryp/supp.vim'                     " Valgrind suppression files
+Plug 'dummyunit/vim-fastbuild'          " FASTBuild
+Plug 'PProvost/vim-ps1'                 " Powershell
+Plug 'vim-scripts/rtorrent-syntax-file' " rTorrent
+Plug 'cespare/vim-toml'                 " TOML
+call plug#end()
 
-call vundle#end()
-filetype plugin indent on
-
-syntax enable
+set nocompatible                      " be iMproved
 
 set background=dark
 colorscheme solarized
