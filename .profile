@@ -12,7 +12,7 @@ if [ -f $HOME/.profile.local ]; then
 fi
 
 # Add ruby gems to the $PATH
-if which ruby >/dev/null && which gem >/dev/null; then
+if which ruby &>/dev/null && which gem &>/dev/null; then
     PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
     export GEM_HOME=$HOME/.gem
 fi
