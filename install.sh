@@ -214,7 +214,8 @@ fi
 if confirm "Install alacritty cfg?"
 then
     # Config path
-    link_file {$REPO,$HOME}/.alacritty.yml
+    mkdir -p $HOME/.config/alacritty
+    link_file {$REPO,$HOME}/.config/alacritty/alacritty.yml
 fi
 
 echo 'done'
