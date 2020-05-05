@@ -203,9 +203,6 @@ bindsym $mod+p mode "$mode_system"
 # Chromium shortcut
 bindsym $mod+c exec firefox
 
-# Start xrdb
-exec xrdb -merge ~/.Xresources
-
 ## Wallpaper
 output * background /home/ryp/.wallpaper fill
 
