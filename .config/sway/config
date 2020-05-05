@@ -9,6 +9,12 @@
 # - redshift
 # - swaylock
 
+input type:keyboard
+{
+    xkb_layout us,fr,ru
+    xkb_options grp:alt_shift_toggle
+}
+
 # Remove title bar
 default_border pixel
 hide_edge_borders both
