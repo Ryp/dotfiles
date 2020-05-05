@@ -16,7 +16,7 @@ font pango:Source Code Pro for Powerline 10
 #font pango:DejaVu Sans Mono 8
 
 # launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec
+set $menu bemenu-run
 
 # terminal
 set $term alacritty
