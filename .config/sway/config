@@ -1,3 +1,14 @@
+# Implicit dependencies:
+# - alacritty
+# - bemenu
+# - cmus
+# - firefox
+# - grim
+# - i3status
+# - pulseaudio
+# - redshift
+# - swaylock
+
 # Remove title bar
 default_border pixel
 hide_edge_borders both
@@ -123,7 +134,7 @@ bindsym XF86AudioNext exec --no-startup-id "cmus-remote --next"
 bindsym XF86AudioPrev exec --no-startup-id "cmus-remote --prev"
 
 # Take a screenshot
-bindsym $mod+Shift+s exec "scrot ~/Images/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+s exec "grim ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png"
 
 # Resize window
 mode "resize" {
