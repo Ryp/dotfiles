@@ -16,20 +16,21 @@ general {
 }
 
 #order += "ipv6"
-order += "disk /"
+#order += "disk /"
 #order += "disk /mnt/hdd"
 #order += "disk /mnt/hdd2"
-order += "battery 0"
-order += "battery 1"
+order += "volume master"
 order += "wireless _first_"
 #order += "ethernet _first_"
-order += "volume master"
+#order += "battery 0"
+#order += "battery 1"
+order += "battery all"
 #order += "load"
 order += "tztime local"
 
 volume master {
-    format = "♪: %volume"
-    format_muted = "♪: muted (%volume)"
+    format = "♪ %volume"
+    format_muted = "♪ %volume"
     device = "default"
     mixer = "Master"
     mixer_idx = 0
@@ -37,7 +38,7 @@ volume master {
 
 wireless _first_ {
 #    format_up = "wifi %essid%quality (%ip)"
-    format_up = "wifi %essid%quality"
+    format_up = "%essid%quality"
     format_down = "no wifi"
 }
 
@@ -60,9 +61,9 @@ battery 0 {
     low_threshold = 10
 }
 
-battery 1 {
+battery all {
     format_down = ""
-    format = "ext%status %percentage %remaining"
+    format = "⚡%status %percentage %consumption"
     hide_seconds = true
     integer_battery_capacity = true
     last_full_capacity = true
@@ -75,22 +76,9 @@ battery 1 {
 }
 
 tztime local {
-    format = "%a %d.%m.%Y %H:%M"
+    format = "%a %d.%m %H:%M"
 }
 
 load {
     format = "%1min"
 }
-
-disk "/" {
-    format = "⛁ %free"
-}
-
-disk "/mnt/hdd" {
-    format = "⛁ %free"
-}
-
-disk "/mnt/hdd2" {
-    format = "⛁ %free"
-}
-
