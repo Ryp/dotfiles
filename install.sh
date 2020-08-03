@@ -137,10 +137,10 @@ then
     if confirm "Vim plugins post-install?"
     then
         # Install powerline patched fonts
-        $HOME/.vim/bundle/powerline-fonts/install.sh
+        $HOME/.vim/plugged/powerline-fonts/install.sh
         # Setup YCM
         # requires some libs first, check the help (:h Ycm)
-        $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --racer-completer
+        $HOME/.vim/plugged/YouCompleteMe/install.py --clang-completer --racer-completer
 
         rust_source_archive="1.36.0.tar.gz"
         rust_source_path="$HOME/.vim/cache"
