@@ -154,11 +154,9 @@ then
     mkdir -p $HOME/.config/sway
     link_file {$REPO,$HOME}/.config/sway/config
 
+    # i3status is still used to generate the text for swaybar
     mkdir -p $HOME/.config/i3status
     link_file {$REPO,$HOME}/.config/i3status/config
-
-    link_folder $REPO/.Xresources.d $HOME
-    link_file {$REPO,$HOME}/.Xresources
 fi
 
 if confirm "Install ranger cfg?"
