@@ -9,3 +9,4 @@ set format_playlist_va= %-21%l %3n. %t (%a)%= %g %{?y!=0?%4y?    } %d %{?X!=0?%3
 set lib_sort=album discnumber tracknumber title genre filename
 
 fset ost=genre="Soundtrack"
+fset rap=genre="Rap*"
