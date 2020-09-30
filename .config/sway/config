@@ -4,6 +4,7 @@
 # - cmus
 # - firefox
 # - grim
+# - slurp
 # - i3status
 # - pulseaudio
 # - redshift
@@ -140,7 +141,8 @@ bindsym XF86AudioNext exec --no-startup-id "cmus-remote --next"
 bindsym XF86AudioPrev exec --no-startup-id "cmus-remote --prev"
 
 # Take a screenshot
-bindsym $mod+Shift+s exec "grim ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png"
+bindsym $mod+Shift+s exec "grim               ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png"
+bindsym $mod+Shift+a exec 'grim -g "$(slurp)" ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png'
 
 # Resize window
 mode "resize" {
