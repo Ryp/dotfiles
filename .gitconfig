@@ -2,6 +2,8 @@
     statusHints = false
 [credential]
     helper = cache
+[pull]
+    ff = only
 [push]
     default = simple
 [core]
