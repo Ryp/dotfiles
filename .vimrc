@@ -301,6 +301,9 @@ let g:ycm_rust_src_path = $HOME . '/.vim/cache/rust-1.36.0/src'
 
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 
+" CMake integration
+let g:cmake_project_generator = 'Ninja'
+
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
 autocmd BufNewFile,BufRead *.hlsli set ft=hlsl
