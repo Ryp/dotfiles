@@ -3,6 +3,7 @@
 # - bemenu
 # - cmus
 # - firefox
+# - keepassxc
 # - grim
 # - slurp
 # - i3status
@@ -122,7 +123,7 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+z reload
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Shift+r restart
 
@@ -207,11 +208,22 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
-# Chromium shortcut
+# Browser
 bindsym $mod+c exec firefox
+bindsym $mod+Shift+c exec firefox --private-window
+bindsym $mod+Ctrl+Shift+c exec torbrowser-launcher
+
+# Keyring
+bindsym $mod+b exec keepassxc
+
+# NOTE: keep this around for when Discord adds dbus support
+# bindsym --no-repeat F12 exec gdbus call -e -d net.sourceforge.mumble.mumble -o / -m net.sourceforge.mumble.Mumble.startTalk
+# bindsym --release F12 exec gdbus call -e -d net.sourceforge.mumble.mumble -o / -m net.sourceforge.mumble.Mumble.stopTalk
 
 ## Wallpaper
-output * background /home/ryp/.wallpaper fill
+output * {
+    background /home/ryp/.wallpaper fill
+}
 
 # FIXME Lock screen on startup
 exec --no-startup-id $lock
