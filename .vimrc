@@ -4,6 +4,8 @@ Plug 'scrooloose/nerdtree'              " Handy tree explorer
 Plug 'tpope/vim-unimpaired'             " Additionnal pair mappings
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'LucHermitte/alternate-lite'       " C/C++ header/source file switching (a.vim-like)
+Plug 'LucHermitte/lh-vim-lib'           " + code dependency
 Plug 'Valloric/YouCompleteMe'           " Completion support
 Plug 'SirVer/ultisnips'                 " Snippet support
 Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
@@ -282,6 +284,9 @@ nmap <leader>s ye:%s/<c-r>"/<c-r>"
 
 " Open vertically split vim-man for word under cursor
 map <leader>gm <Plug>(Vman)
+
+" Configure alternate-lite
+nmap <leader>gh :A<CR>
 
 " Configure UltiSnips
 let g:UltiSnipsSnippetDirectories = [ "ultisnips" ]
