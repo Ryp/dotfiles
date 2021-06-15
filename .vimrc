@@ -11,7 +11,10 @@ Plug 'SirVer/ultisnips'                 " Snippet support
 Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
 Plug 'mileszs/ack.vim'
 Plug 'vim-utils/vim-man'                " Better manual integration
-Plug 'vhdirk/vim-cmake'                 " CMake integration
+" FIXME using PR upstream until merged
+" see: https://github.com/vhdirk/vim-cmake/pull/33
+" Plug 'vhdirk/vim-cmake'                 " CMake integration
+Plug 'otreblan/vim-cmake'               " CMake integration
 Plug 'rust-lang/rust.vim'               " Rust integration
 
 " VCS
