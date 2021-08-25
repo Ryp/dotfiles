@@ -318,6 +318,7 @@ nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 
 " CMake integration
 let g:cmake_project_generator = 'Ninja'
+let g:cmake_build_shared_libs = 1
 
 " Reuse hlsl highlighting for cg files
 autocmd BufNewFile,BufRead *.cg set ft=hlsl
