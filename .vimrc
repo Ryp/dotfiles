@@ -33,6 +33,7 @@ Plug 'edkolev/tmuxline.vim'             " Apply VIM's theme to tmux
 
 " Extra syntax support
 Plug 'octol/vim-cpp-enhanced-highlight' " C++
+Plug 'ziglang/zig.vim'                  " Zig
 Plug 'pboettch/vim-cmake-syntax'        " CMake
 Plug 'beyondmarc/hlsl.vim'              " HLSL
 Plug 'tikhomirov/vim-glsl'              " GLSL
