@@ -141,7 +141,13 @@ function! MakeRun()
     execute '!' . g:runprg
 endfunction
 
-map <F6> :call MakeRun()<CR>
+function! MakeRunDbg()
+    silent make
+    execute '!' . 'gdb -quiet -ex=r --args ' . g:runprg
+endfunction
+
+map <F6> :call MakeRunDbg()<CR>
+map <F7> :call MakeRun()<CR>
 
 " Simple function to strip trailing whitespaces
 function! StripWhitespace()
