@@ -202,10 +202,10 @@ nmap <leader>cf :!clang-format -style=file -i %<CR>
 
 " vim-fugitive
 nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gb :Git blame<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gc :Git commit -v -q<CR>
+nnoremap <leader>gt :Git commit -v -q %:p<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
