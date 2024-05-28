@@ -17,5 +17,15 @@ snippet reaper_license "Reaper License Header"
 /// This file is distributed under the MIT License
 ////////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+#include "`!p snip.rv = snip.fn`"
+
+namespace Reaper
+{
 ${0}
+} // namespace Reaper
+endsnippet
+
+snippet comment "Comment With Date"
+// Thibault S. {`date +%F`) $0
 endsnippet
