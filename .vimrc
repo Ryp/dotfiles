@@ -134,7 +134,7 @@ map <F5> :silent make\|redraw!\|cc<CR>
 " Automatically open quickfix window if errors are found
 autocmd QuickFixCmdPost * :cw
 
-let g:runprg ='gdb -ex=r --args ./build/reaper && chromium profile.html'
+" let g:runprg = ''
 
 function! MakeRun()
     silent make
@@ -199,7 +199,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 nmap <silent> <leader>r :!ranger<CR>
 
 " Use clang-format on current source file
-nmap <leader>cf :!clang-format -style=file -i %<CR>
+map <leader>cf :!clang-format -style=file -i %<CR>
 
 " Plugin configuration
 
@@ -315,9 +315,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_server_log_level = 'debug'
-let g:ycm_rust_src_path = $HOME . '/.vim/cache/rust-1.36.0/src'
 
-nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
 " CMake integration
 let g:cmake_project_generator = 'Ninja'
