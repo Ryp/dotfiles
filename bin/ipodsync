@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-rsync -rv --size-only --delete --progress /mnt/hdd/music/ /mnt/usb/Music/
-sync

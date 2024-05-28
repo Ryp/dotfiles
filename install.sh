@@ -99,7 +99,6 @@ link_file {$REPO,$HOME}/.gdbinit
 if confirm "Install custom scripts?"
 then
     mkdir -p $HOME/.local/bin
-    link_file {$REPO,$HOME/.local}/bin/ipodsync
     link_file {$REPO,$HOME/.local}/bin/set_wallpaper
 fi
 
