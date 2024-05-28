@@ -3,10 +3,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-# FIXME Qt workaround for upstream bug
-# https://bbs.archlinux.org/viewtopic.php?id=251772
-export QT_AUTO_SCREEN_SCALE_FACTOR=0
-
 # Limit make verbosity
 export GNUMAKEFLAGS=--no-print-directory
 
@@ -33,4 +29,3 @@ export PATH="$HOME/.local/bin:$PATH"
 stty -ixon -ixoff ixany
 stty start undef
 stty stop undef
-
