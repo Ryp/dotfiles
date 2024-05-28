@@ -138,12 +138,15 @@ let g:runprg ='gdb -ex=r --args ./build/reaper && chromium profile.html'
 
 function! MakeRun()
     silent make
-    execute '!' . g:runprg
+    execute 'silent !' . g:runprg
+    execute 'redraw'
 endfunction
 
 function! MakeRunDbg()
     silent make
-    execute '!' . 'gdb -quiet -ex=r --args ' . g:runprg
+    " Works if the confirm prompts is active
+    execute 'silent !' . 'gdb -quiet -ex="set confirm on" -ex=run -ex=quit --args ' . g:runprg
+    execute 'redraw'
 endfunction
 
 map <F6> :call MakeRunDbg()<CR>
