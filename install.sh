@@ -178,16 +178,6 @@ then
     link_folder $REPO/.tmux $HOME
 fi
 
-if confirm "Install rtorrent cfg?"
-then
-    # Config path
-    mkdir -p $HOME/.config/rtorrent
-    link_file {$REPO,$HOME}/.rtorrent.rc
-
-    # Local folders
-    mkdir -p $HOME/.local/share/rtorrent/{download,session,log}
-fi
-
 if confirm "Install alacritty cfg?"
 then
     # Config path
