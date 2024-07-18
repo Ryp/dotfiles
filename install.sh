@@ -95,17 +95,10 @@ echo 'Installing from' $REPO
 
 link_file {$REPO,$HOME}/.gitconfig
 link_file {$REPO,$HOME}/.gdbinit
-
-if confirm "Install custom scripts?"
-then
-    mkdir -p $HOME/.local/bin
-    link_file {$REPO,$HOME/.local}/bin/set_wallpaper
-fi
-
-link_file {$REPO,$HOME}/.profile
 link_file {$REPO,$HOME}/.aliases
 link_file {$REPO,$HOME}/.dircolors
 link_file {$REPO,$HOME}/.config/user-dirs.dirs
+link_file {$REPO,$HOME}/.profile
 
 if confirm "Install bash cfg?"
 then
@@ -139,14 +132,10 @@ then
     fi
 fi
 
-if confirm "Install sway cfg?"
+if confirm "Install tmux cfg?"
 then
-    mkdir -p $HOME/.config/sway
-    link_file {$REPO,$HOME}/.config/sway/config
-
-    # i3status is still used to generate the text for swaybar
-    mkdir -p $HOME/.config/i3status
-    link_file {$REPO,$HOME}/.config/i3status/config
+    link_file {$REPO,$HOME}/.tmux.conf
+    link_folder $REPO/.tmux $HOME
 fi
 
 if confirm "Install ranger cfg?"
@@ -162,10 +151,14 @@ then
     link_file {$REPO,$HOME}/.config/cmus/rc
 fi
 
-if confirm "Install tmux cfg?"
+if confirm "Install sway cfg?"
 then
-    link_file {$REPO,$HOME}/.tmux.conf
-    link_folder $REPO/.tmux $HOME
+    mkdir -p $HOME/.config/sway
+    link_file {$REPO,$HOME}/.config/sway/config
+
+    # i3status is still used to generate the text for swaybar
+    mkdir -p $HOME/.config/i3status
+    link_file {$REPO,$HOME}/.config/i3status/config
 fi
 
 if confirm "Install alacritty cfg?"
@@ -173,6 +166,12 @@ then
     # Config path
     mkdir -p $HOME/.config/alacritty
     link_file {$REPO,$HOME}/.config/alacritty/alacritty.toml
+fi
+
+if confirm "Install custom scripts?"
+then
+    mkdir -p $HOME/.local/bin
+    link_file {$REPO,$HOME/.local}/bin/set_wallpaper
 fi
 
 echo 'done'
