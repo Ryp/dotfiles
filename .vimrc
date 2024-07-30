@@ -15,14 +15,12 @@ Plug 'vim-utils/vim-man'                " Better manual integration
 " see: https://github.com/vhdirk/vim-cmake/pull/33
 " Plug 'vhdirk/vim-cmake'                 " CMake integration
 Plug 'otreblan/vim-cmake'               " CMake integration
-Plug 'rust-lang/rust.vim'               " Rust integration
 
 " VCS
 Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'tpope/vim-rhubarb'                " + support for GitHub
 Plug 'shumphrey/fugitive-gitlab.vim'    " + support for GitLab
 Plug 'airblade/vim-gitgutter'           " Extra column for git +/- signs
-Plug 'nfvs/vim-perforce'                " Perforce integration
 
 " Cosmetic plugins
 Plug 'altercation/vim-colors-solarized' " Solarized colors
@@ -36,13 +34,10 @@ Plug 'octol/vim-cpp-enhanced-highlight' " C++
 Plug 'ziglang/zig.vim'                  " Zig
 Plug 'pboettch/vim-cmake-syntax'        " CMake
 Plug 'beyondmarc/hlsl.vim'              " HLSL
-Plug 'tikhomirov/vim-glsl'              " GLSL
 Plug 'kbenzie/vim-spirv'                " SPIR-V
 Plug 'Ryp/vim-gcn-isa'                  " GCN ISA
 Plug 'Ryp/supp.vim'                     " Valgrind suppression files
-Plug 'dummyunit/vim-fastbuild'          " FASTBuild
 Plug 'PProvost/vim-ps1'                 " Powershell
-Plug 'vim-scripts/rtorrent-syntax-file' " rTorrent
 Plug 'cespare/vim-toml'                 " TOML
 call plug#end()
 
