@@ -8,6 +8,11 @@ source $SCRIPT_DIR/install_minimal.sh
 link_file {$REPO,$HOME}/.gdbinit
 link_file {$REPO,$HOME}/.zlogin
 
+if confirm "Install NeoVim?"
+then
+    link_folder $REPO/.config/nvim $HOME/.config
+fi
+
 if confirm "Install vim YCM?"
 then
     # Setup YCM
