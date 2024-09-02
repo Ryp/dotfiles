@@ -78,20 +78,20 @@ foreground = "#839496"
 size = 12.0
 
 [font.bold]
-family = "Source Code Pro for Powerline"
+family = "SauceCodePro Nerd Font"
 
 [font.bold_italic]
-family = "Source Code Pro for Powerline"
+family = "SauceCodePro Nerd Font"
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
 
 [font.glyph_offset]
 x = 0
 y = 0
-
-[font.italic]
-family = "Source Code Pro for Powerline"
-
-[font.normal]
-family = "Source Code Pro for Powerline"
 
 [font.offset]
 x = -1
