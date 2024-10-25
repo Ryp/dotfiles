@@ -4,3 +4,4 @@
 --
 vim.keymap.set("i", "jk", "<ESC>", { silent = true })
 vim.keymap.set("n", ";", ":", { noremap = true })
+vim.api.nvim_set_keymap("n", "<F5>", ":make<CR>", { noremap = true, silent = true })
