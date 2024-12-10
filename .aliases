@@ -6,6 +6,8 @@ alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -laF --color'
 
+alias v='nvim'
+
 alias df='df --human-readable'
 alias du='du --human-readable'
 

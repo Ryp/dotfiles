@@ -3,7 +3,8 @@
 # - bemenu
 # - cmus
 # - firefox
-# - keepassxc
+# - bitwarden-desktop
+# - obsidian
 # - grim
 # - slurp
 # - i3status
@@ -41,7 +42,7 @@ set $menu bemenu-run
 set $term alacritty
 
 # lock
-set $lock swaylock -c 000000
+set $lock swaylock -c 000000 --daemonize
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -142,8 +143,8 @@ bindsym XF86AudioNext exec --no-startup-id "cmus-remote --next"
 bindsym XF86AudioPrev exec --no-startup-id "cmus-remote --prev"
 
 # Take a screenshot
-bindsym $mod+Shift+s exec "grim               ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png"
-bindsym $mod+Shift+a exec 'grim -g "$(slurp)" ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png'
+bindsym Ctrl+Alt+s exec "grim               ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png"
+bindsym Ctrl+Alt+a exec 'grim -g "$(slurp)" ~/screenshot-`date +%Y-%m-%d-%H:%M:%S`.png'
 
 # Resize window
 mode "resize" {
@@ -208,7 +209,7 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
-# Browser
+# Apps
 bindsym $mod+c exec firefox
 bindsym $mod+Shift+c exec firefox --private-window
 bindsym $mod+Ctrl+Shift+c exec torbrowser-launcher
