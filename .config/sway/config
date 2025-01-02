@@ -213,9 +213,8 @@ bindsym $mod+p mode "$mode_system"
 bindsym $mod+c exec firefox
 bindsym $mod+Shift+c exec firefox --private-window
 bindsym $mod+Ctrl+Shift+c exec torbrowser-launcher
-
-# Keyring
-bindsym $mod+b exec keepassxc
+bindsym $mod+o exec obsidian --no-sandbox --ozone-platform=wayland --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations %U
+bindsym $mod+i exec pavucontrol
 
 # NOTE: keep this around for when Discord adds dbus support
 # bindsym --no-repeat F12 exec gdbus call -e -d net.sourceforge.mumble.mumble -o / -m net.sourceforge.mumble.Mumble.startTalk
