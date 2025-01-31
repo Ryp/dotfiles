@@ -27,7 +27,6 @@ Plug 'altercation/vim-colors-solarized' " Solarized colors
 Plug 'vim-airline/vim-airline'          " Main theming plugin
 Plug 'vim-airline/vim-airline-themes'   " Extra themes
 Plug 'Lokaltog/powerline-fonts'         " Fancy fonts
-Plug 'edkolev/tmuxline.vim'             " Apply VIM's theme to tmux
 
 " Extra syntax support
 Plug 'octol/vim-cpp-enhanced-highlight' " C++
