@@ -36,11 +36,10 @@ then
     link_file {$REPO,$HOME}/.config/i3status/config
 fi
 
-if confirm "Install alacritty cfg?"
+if confirm "Install ghostty cfg?"
 then
-    # Config path
-    mkdir -p $HOME/.config/alacritty
-    link_file {$REPO,$HOME}/.config/alacritty/alacritty.toml
+    mkdir -p $HOME/.config/ghostty
+    link_file {$REPO,$HOME}/.config/ghostty/config
 fi
 
 if confirm "Install custom scripts?"

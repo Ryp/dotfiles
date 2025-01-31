@@ -1,5 +1,5 @@
 # Implicit dependencies:
-# - alacritty
+# - ghostty
 # - bemenu
 # - cmus
 # - firefox
@@ -39,7 +39,7 @@ font pango:Source Code Pro for Powerline 10
 set $menu bemenu-run
 
 # terminal
-set $term alacritty
+set $term ghostty
 
 # lock
 set $lock swaylock -c 000000 --daemonize

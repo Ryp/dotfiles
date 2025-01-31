@@ -1,0 +1,4 @@
+font-family = "SauceCodePro Nerd Font"
+theme = catppuccin-mocha
+window-decoration = false
+font-size = 13
