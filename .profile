@@ -6,6 +6,9 @@ export LANGUAGE=en_US.UTF-8
 # Limit make verbosity
 export GNUMAKEFLAGS=--no-print-directory
 
+# Set default text editor
+# export EDITOR=nvim
+
 # Source local profile if any
 if [ -f $HOME/.profile.local ]; then
     source $HOME/.profile.local
