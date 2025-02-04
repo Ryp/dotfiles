@@ -9,7 +9,6 @@
 source $HOME/.zshrc_grml
 
 # Load user settings
-source $HOME/.profile
 source $HOME/.aliases
 
 # Global aliases

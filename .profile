@@ -20,8 +20,10 @@ if which ruby &>/dev/null && which gem &>/dev/null; then
     export GEM_HOME=$HOME/.gem
 fi
 
-# Add commonly used local bin folder
-export PATH="$HOME/.local/bin:$PATH"
+# Set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # [-]ixany  let any character restart output, not only start character
 # [-]ixoff  enable sending of start/stop characters
@@ -32,3 +34,17 @@ export PATH="$HOME/.local/bin:$PATH"
 stty -ixon -ixoff ixany
 stty start undef
 stty stop undef
+
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        source "$HOME/.bashrc"
+    fi
+fi
