@@ -1,16 +1,8 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Simple prompt
 PS1='\W \$ '
-
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
 
 # Manage this file
 alias edit_rc='$EDITOR ~/.bashrc'
@@ -24,3 +16,5 @@ fi
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
 fi
+
+source ~/.shrc

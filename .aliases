@@ -1,6 +1,4 @@
-# NOTE: This file should be sourced from .zshrc
-
-#### Misc aliases
+# Misc aliases
 alias ls='ls --color'
 alias ll='ls -l'
 alias la='ls -la'
@@ -35,4 +33,6 @@ for al in `git config --get-regexp 'alias.*' | cut -c 7- | cut -d " " -f1`; do
 done
 
 # Source local aliases if any
-[ -f ~/.aliases.local ] && source ~/.aliases.local
+if [ ~/.aliases.local ]; then
+    source ~/.aliases.local
+fi

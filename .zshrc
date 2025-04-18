@@ -8,9 +8,6 @@
 # Source the main configuration for zsh
 source $HOME/.zshrc_grml
 
-# Load user settings
-source $HOME/.aliases
-
 # Global aliases
 alias -g ...=../..
 alias -g ....=../../..
@@ -92,11 +89,6 @@ bindkey "^X^E" edit-command-line
 # Prevent Zsh from appending a '%' to delimit unfinished outputs
 unsetopt prompt_cr
 
-# Source local zshrc if any
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
-
 function ranger-cd {
     local tmpfile="$(mktemp)"
     ranger --choosedir=$tmpfile $argv
@@ -105,6 +97,13 @@ function ranger-cd {
         cd $rangerpwd
     fi
 }
+
+# Source local zshrc if any
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
+
+source ~/.shrc
 
 # Uncomment to profile zsh startup
 #zprof

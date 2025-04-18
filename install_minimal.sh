@@ -99,6 +99,7 @@ link_file {$REPO,$HOME}/.dircolors
 link_file {$REPO,$HOME}/.config/user-dirs.dirs
 link_file {$REPO,$HOME}/.aliases
 link_file {$REPO,$HOME}/.gitconfig
+link_file {$REPO,$HOME}/.shrc
 
 if confirm "Install bash cfg?"
 then

@@ -1,0 +1,11 @@
+# This file is here to share common config between bashrc and zshrc files
+# NOTE: Only put code that would work on both zsh and bash!
+
+# Load user settings
+source $HOME/.aliases
+
+# Source local shrc if any
+if [ -f ~/.shrc.local ]; then
+    source ~/.shrc.local
+fi
+
