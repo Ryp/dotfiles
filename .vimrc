@@ -14,7 +14,7 @@ Plug 'vim-utils/vim-man'                " Better manual integration
 " FIXME using PR upstream until merged
 " see: https://github.com/vhdirk/vim-cmake/pull/33
 " Plug 'vhdirk/vim-cmake'                 " CMake integration
-Plug 'otreblan/vim-cmake'               " CMake integration
+" Plug 'otreblan/vim-cmake'               " CMake integration
 
 " VCS
 Plug 'tpope/vim-fugitive'               " Git integration

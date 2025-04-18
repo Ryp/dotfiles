@@ -38,6 +38,7 @@
     ap = add --patch
     lgm = log master..
     l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg = log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)<%an>%C(bold yellow)%d%Creset %s %C(bold green)(%<(5,trunc)%ad%x08 %<(18,trunc)%ai%x08 ~ %ar)%Creset' --abbrev-commit
     pat = format-patch --stdout HEAD~1
     co = checkout
     nb = checkout -b
