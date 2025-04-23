@@ -97,7 +97,6 @@ echo 'Installing from' $REPO
 link_file {$REPO,$HOME}/.profile
 link_file {$REPO,$HOME}/.dircolors
 link_file {$REPO,$HOME}/.config/user-dirs.dirs
-link_file {$REPO,$HOME}/.aliases
 link_file {$REPO,$HOME}/.gitconfig
 link_file {$REPO,$HOME}/.shrc
 
@@ -130,6 +129,8 @@ if confirm "Install tmux cfg?"
 then
     link_file {$REPO,$HOME}/.tmux.conf
     link_folder $REPO/.tmux $HOME
+    echo "!!!!!! After this is installed, run TMUX_PREFIX + I to install the plugins"
+    echo "See https://github.com/tmux-plugins/tpm"
 fi
 
 if confirm "Install ranger cfg?"

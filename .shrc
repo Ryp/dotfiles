@@ -1,8 +1,39 @@
 # This file is here to share common config between bashrc and zshrc files
 # NOTE: Only put code that would work on both zsh and bash!
 
-# Load user settings
-source $HOME/.aliases
+# Misc aliases
+alias ls='ls --color'
+alias ll='ls -l'
+alias la='ls -la'
+alias l='ls -laF --color'
+
+alias v='nvim'
+
+alias df='df --human-readable'
+alias du='du --human-readable'
+
+alias rr='ranger'
+
+alias edit_aliases='$EDITOR ~/.aliases'
+
+alias fucking='sudo'
+
+### Dev
+alias make='make --no-print-directory'
+alias fmake='make -j16'
+
+alias gdb='gdb -q'
+
+alias vg='valgrind'
+alias vgf='valgrind --leak-check=full'
+alias vgfv='valgrind --leak-check=full -v'
+
+alias hd='hexdump -C'
+
+# Takes any git alias in gitconfig and shortens it even more
+for al in `git config --get-regexp 'alias.*' | cut -c 7- | cut -d " " -f1`; do
+    alias g$al="git $al"
+done
 
 # Source local shrc if any
 if [ -f ~/.shrc.local ]; then
