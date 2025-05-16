@@ -1,7 +1,7 @@
 bind -f common ^U win-page-up
 bind -f common ^D win-page-down
 
-colorscheme solarized-dark
+colorscheme dracula
 
 # Setup sorted library view
 set format_playlist= %-21%l %3n. %t%= %g %{?y!=0?%4y?    } %d %{?X!=0?%3X?   } 
