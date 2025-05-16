@@ -1,21 +1,16 @@
-#
-# ~/.zshrc
-#
-
+# Profiling
+ZSH_PROFILE_RC=1 # Set so that GRML doesn't fail
 # Uncomment to profile zsh startup
 #zmodload zsh/zprof
 
+# Be very pedantic about undefined variables
+set -u
+
+export SHELL_RC_FILE=$HOME/.zshrc
+
 # Source the main configuration for zsh
 source $HOME/.zshrc_grml
-
-# Global aliases
-alias -g ...=../..
-alias -g ....=../../..
-alias -g .....=../../../..
-
-# Manage this file
-alias edit_rc='$EDITOR ~/.zshrc'
-alias reload='source ~/.zshrc'
+unset EDITOR # GRML sets it, but we're setting it later on
 
 # Setup theme
 autoload -U colors && colors
@@ -97,6 +92,11 @@ function ranger-cd {
         cd $rangerpwd
     fi
 }
+
+# Global aliases
+alias -g ...=../..
+alias -g ....=../../..
+alias -g .....=../../../..
 
 # Source local zshrc if any
 if [ -f ~/.zshrc.local ]; then

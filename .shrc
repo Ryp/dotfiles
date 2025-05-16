@@ -1,6 +1,13 @@
 # This file is here to share common config between bashrc and zshrc files
 # NOTE: Only put code that would work on both zsh and bash!
 
+export EDITOR='nvim'
+
+# Manage rc files
+alias reload='source $SHELL_RC_FILE'
+alias edit_rc='$EDITOR $SHELL_RC_FILE'
+alias edit_shrc='$EDITOR $HOME/.shrc'
+
 # Misc aliases
 alias ls='ls --color'
 alias ll='ls -l'
@@ -8,13 +15,12 @@ alias la='ls -la'
 alias l='ls -laF --color'
 
 alias v='nvim'
+alias vim='echo "Forget this binding!"'
 
 alias df='df --human-readable'
 alias du='du --human-readable'
 
 alias rr='ranger'
-
-alias edit_aliases='$EDITOR ~/.aliases'
 
 alias fucking='sudo'
 
