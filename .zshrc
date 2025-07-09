@@ -16,11 +16,8 @@ unset EDITOR # GRML sets it, but we're setting it later on
 autoload -U colors && colors
 autoload -U bashcompinit && bashcompinit
 autoload -Uz promptinit && promptinit
-prompt grml
 
-# Default items
-# zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs percent
-# zstyle ':prompt:grml:right:setup' items sad-smiley
+prompt grml
 
 zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs percent
 zstyle ':prompt:grml:right:setup' items
@@ -29,9 +26,6 @@ zstyle ':prompt:grml:left:items:percent' token '$ '
 
 zstyle ':prompt:grml:left:items:path' pre '%F{blue}'
 zstyle ':prompt:grml:left:items:path' post "%{$reset_color%}"
-
-#zstyle ':prompt:grml:*:items:host' pre  "%{$fg_bold[yellow]%}"
-#zstyle ':prompt:grml:*:items:host' post "%{$reset_color%}"
 
 # Set LS_COLORS
 if [ -f ~/.dircolors ]; then
