@@ -1,15 +1,6 @@
 # This file is here to share common config between bashrc and zshrc files
 # NOTE: Only put code that would work on both zsh and bash!
 
-# Limit make verbosity
-export GNUMAKEFLAGS=--no-print-directory
-
-# Add ruby gems to the $PATH
-if which ruby &>/dev/null && which gem &>/dev/null; then
-    PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-    export GEM_HOME=$HOME/.gem
-fi
-
 # Set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -38,10 +29,6 @@ alias rr='ranger'
 
 alias fucking='sudo'
 
-### Dev
-alias make='make --no-print-directory'
-alias fmake='make -j16'
-
 alias gdb='gdb -q'
 
 alias vg='valgrind'
@@ -54,6 +41,8 @@ alias hd='hexdump -C'
 for al in `git config --get-regexp 'alias.*' | cut -c 7- | cut -d " " -f1`; do
     alias g$al="git $al"
 done
+
+alias cb='cmake --build build'
 
 # Source local shrc if any
 if [ -f ~/.shrc.local ]; then
